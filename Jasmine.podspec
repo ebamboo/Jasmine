@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Jasmine"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.license      = "MIT"
   spec.summary      = "Swift 开发工具包"
   spec.author       = { "ebamboo" => "1453810050@qq.com" }
@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files = "Jasmine/Tools/*.swift"
   
-  spec.swift_versions = ['5.3', '5.4', '5.5']
+  spec.swift_versions = ["5.3", "5.4", "5.5"]
   spec.platform     = :ios, "11.0"
   
 end

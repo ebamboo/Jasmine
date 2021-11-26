@@ -1,6 +1,6 @@
 //
 //  StarPraiseView.swift
-//  SwiftDK
+//  Jasmine
 //
 //  Created by ebamboo on 2021/11/24.
 //

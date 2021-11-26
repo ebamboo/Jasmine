@@ -1,6 +1,6 @@
 //
 //  UICollectionViewCell+Tools.swift
-//  SwiftDK
+//  Jasmine
 //
 //  Created by ebamboo on 2021/4/24.
 //

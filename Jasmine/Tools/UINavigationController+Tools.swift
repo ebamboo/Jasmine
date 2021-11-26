@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UINavigationController {
+public extension UINavigationController {
     
     func pushViewController(_ viewController: UIViewController, hideBottomBar: Bool, hideBackItem: Bool, animated: Bool) {
         viewController.hidesBottomBarWhenPushed = hideBottomBar

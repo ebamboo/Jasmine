@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - 翻转和旋转
 
-extension UIImage {
+public extension UIImage {
     
     /// 翻转方向
     enum FlipDirection {
@@ -79,7 +79,7 @@ extension UIImage {
 
 // MARK: - 压缩图片
 
-extension UIImage {
+public extension UIImage {
     
     func compressedImage(size: CGSize) -> UIImage? {
         if size == self.size {
@@ -104,7 +104,7 @@ extension UIImage {
 
 // MARK: - 图片转换
 
-extension UIImage {
+public extension UIImage {
     
     ///
     /// 图片与 base64 互转

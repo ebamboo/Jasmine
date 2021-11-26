@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Double {
+public extension Double {
     
     /// 弧度转为角度
     var degree: Double {

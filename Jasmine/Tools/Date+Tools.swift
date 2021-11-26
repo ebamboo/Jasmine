@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
 
     func chineseYearMonthDay() -> (year: String, month: String, day: String)? {
         let chineseYears = [

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension FileManager {
+public extension FileManager {
     
     /// 全部可用磁盘
     var diskAllSize: CGFloat? {

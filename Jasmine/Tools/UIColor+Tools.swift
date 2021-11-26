@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
     /// 使用十六进制的数字 hex 表示颜色
     /// HEX 和 RGB 关系如下：

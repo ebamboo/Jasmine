@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UICollectionViewCell {
+public extension UICollectionViewCell {
     
     var collectionView: UICollectionView? {
         var tempSuperview: UIView? = superview

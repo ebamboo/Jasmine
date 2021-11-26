@@ -8,7 +8,7 @@
 import UIKit
 
 /// 通过 ⭐️ 来评分或展示评分
-class StarPraiseView: UIStackView {
+public class StarPraiseView: UIStackView {
     
     ///
     /// 未评分 ⭐️ 图片和已评分 ⭐️ 图片

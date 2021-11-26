@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     func presentAlert(title: String?, messgae: String?, ensureTitle: String, ensureAction: (() -> Void)? = nil) {
         let alertVC = UIAlertController.init(title: title, message: messgae, preferredStyle: .alert)
@@ -66,7 +66,7 @@ extension UIViewController {
     
 }
 
-extension UIViewController {
+public extension UIViewController {
     
     func addChildViewController(_ child: UIViewController, in container: UIView, in rect: CGRect, completion: (() -> Void)?) {
         addChild(child)

@@ -8,7 +8,7 @@
 import UIKit
 
 /// 自由控制 UIButton 的 image 和 text 位置和间距
-class OrientationButton: UIButton {
+public class OrientationButton: UIButton {
 
     enum Orientation: Int {
         case LandscapeLeft      = 0 ///  图片在左
@@ -24,7 +24,7 @@ class OrientationButton: UIButton {
     }
     @IBInspectable var spacing: CGFloat = 0.0
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         layoutImageAndText()
     }

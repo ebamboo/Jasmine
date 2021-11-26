@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - 边角设置
 
-extension UIView {
+public extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {
         get {
@@ -45,7 +45,7 @@ extension UIView {
 
 // MARK: - 布局
 
-extension UIView {
+public extension UIView {
 
     // MARK: - 只读属性
     
@@ -161,7 +161,7 @@ extension UIView {
 
 // MARK: - 层次关系
 
-extension UIView {
+public extension UIView {
     
     var viewController: UIViewController? {
         var view: UIView? = superview
@@ -189,7 +189,7 @@ extension UIView {
 
 // MARK: - 毛玻璃
 
-extension UIView {
+public extension UIView {
     
     func addEffect(style: UIBlurEffect.Style = .light) {
         let effect = UIBlurEffect(style: style)
@@ -202,7 +202,7 @@ extension UIView {
 
 // MARK: - 色彩变化
 
-extension UIView {
+public extension UIView {
     
     private static var GLOWVIEW = "GLOWVIEW";
     private var glowView: UIImageView? {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
     
     /// [0, num] 范围内随机数
     static func random(in num: UInt32) -> Int {

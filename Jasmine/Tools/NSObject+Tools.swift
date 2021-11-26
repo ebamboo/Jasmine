@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension NSObject {
+public extension NSObject {
     
     /// 在 limit 秒内倒计时
     func countdown(with limit: Int, progress: @escaping ((_ remainder: Int) -> Void), completion: @escaping (() -> Void)) {

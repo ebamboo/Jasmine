@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UITableViewCell {
+public extension UITableViewCell {
     
     var tableView: UITableView? {
         var tempSuperview: UIView? = superview

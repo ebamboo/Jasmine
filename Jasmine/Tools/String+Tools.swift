@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - 验证
 
-extension String {
+public extension String {
 
     func isPhone() -> Bool {
         let mobilePhone = "^1[3-9][0-9]{9}$"
@@ -120,7 +120,7 @@ extension String {
 
 // MARK: - 计算尺寸
 
-extension String {
+public extension String {
     
     /// 给定 font 和 width 计算出字符串所占用尺寸的高度
     func height(with font: UIFont, width: CGFloat) -> CGFloat {
@@ -136,7 +136,7 @@ extension String {
 
 // MARK: - 子字符串
 
-extension String {
+public extension String {
     
     /// 去除字符串中的空格
     func noneSpaceString() -> String {
@@ -197,7 +197,7 @@ extension String {
 
 // MARK: - 打电话
 
-extension String {
+public extension String {
     
     func callPhone() {
         if let url = URL(string: "telprompt://\(self)") {

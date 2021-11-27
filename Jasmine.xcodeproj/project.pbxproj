@@ -30,6 +30,7 @@
 		ADF36DC72750FE1A008BA1DB /* UITableViewCell+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */; };
 		ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */; };
 		ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */; };
+		ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E192752406F008BA1DB /* Keychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Tools.swift"; sourceTree = "<group>"; };
 		ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainViewController.swift; sourceTree = "<group>"; };
 		ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeychainViewController.xib; sourceTree = "<group>"; };
+		ADF36E192752406F008BA1DB /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
 				ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */,
 				ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */,
+				ADF36E192752406F008BA1DB /* Keychain.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				ADF36DBF2750FE1A008BA1DB /* Double+Tools.swift in Sources */,
 				ADF36DC72750FE1A008BA1DB /* UITableViewCell+Tools.swift in Sources */,
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,
+				ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */,
 				ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */,
 				ADF36DC32750FE1A008BA1DB /* Int+Tools.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,

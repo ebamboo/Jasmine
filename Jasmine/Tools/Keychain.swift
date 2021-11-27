@@ -39,7 +39,7 @@ public struct Keychain {
 public extension Keychain {
     
     /// 查询 account 和 password
-    func queryAccountAndPassword() -> (account: String, password: Data)? {
+    func readAccountAndPassword() -> (account: String, password: Data)? {
         var query = baseQuery
         query[kSecMatchLimit as String] = kSecMatchLimitOne as String
         query[kSecReturnData as String] = true
@@ -56,7 +56,7 @@ public extension Keychain {
     /// 存储  account 和 password
     /// 如果已存在则更新数据
     /// 如果不存在则增加新的纪录
-    func storeAccountAndPassword(account: String, password: Data) -> Bool {
+    func writeAccountAndPassword(account: String, password: Data) -> Bool {
         var query = baseQuery
         query[kSecMatchLimit as String] = kSecMatchLimitOne as String
         query[kSecReturnAttributes as String] = true

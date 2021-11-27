@@ -7,7 +7,8 @@
 
 import Foundation
 
-public class Keychain {
+/// 使用钥匙串管理账号密码
+public struct Keychain {
     
     ///
     /// 通常 service 使用 bundle identifier 来标明一个 App 在 keychain 唯一标识
@@ -15,14 +16,9 @@ public class Keychain {
     /// identifier 和 service 可以认为是主键
     /// accessGroup 使用要注意和开发者账号前缀有关，要使用全称
     ///
-    private let identifier: String
-    private let service: String
-    private let accessGroup: String?
-    init(identifier: String, service: String, accessGroup: String?) {
-        self.identifier = identifier
-        self.service = service
-        self.accessGroup = accessGroup
-    }
+    let identifier: String
+    let service: String
+    let accessGroup: String?
     
     private var baseQuery: [String: Any] {
         var query = [String: Any]()

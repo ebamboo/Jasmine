@@ -28,6 +28,8 @@
 		ADF36DC52750FE1A008BA1DB /* NSObject+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */; };
 		ADF36DC62750FE1A008BA1DB /* UIColor+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */; };
 		ADF36DC72750FE1A008BA1DB /* UITableViewCell+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */; };
+		ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */; };
+		ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Tools.swift"; sourceTree = "<group>"; };
+		ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainViewController.swift; sourceTree = "<group>"; };
+		ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeychainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF36DA72750FD8A008BA1DB /* Tools */,
+				ADF36E1427523FB2008BA1DB /* Test */,
 				ADF36D932750FCA1008BA1DB /* AppDelegate.swift */,
 				ADF36D972750FCA1008BA1DB /* ViewController.swift */,
 				ADF36D992750FCA1008BA1DB /* Main.storyboard */,
@@ -118,6 +123,15 @@
 				ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		ADF36E1427523FB2008BA1DB /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */,
+				ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +194,7 @@
 			files = (
 				ADF36DA02750FCA3008BA1DB /* LaunchScreen.storyboard in Resources */,
 				ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */,
+				ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */,
 				ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +219,7 @@
 				ADF36DC32750FE1A008BA1DB /* Int+Tools.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,
 				ADF36DC22750FE1A008BA1DB /* UIViewController+Tools.swift in Sources */,
+				ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */,
 				ADF36D942750FCA1008BA1DB /* AppDelegate.swift in Sources */,
 				ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */,
 				ADF36DC02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift in Sources */,
@@ -365,7 +381,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +410,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

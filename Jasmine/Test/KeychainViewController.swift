@@ -29,7 +29,7 @@ class KeychainViewController: UIViewController {
     @IBAction func saveAction(_ sender: Any) {
         guard let account = accountField.text, account.count > 0,
               let password = passwordField.text, password.count > 0 else { return }
-        let success = keychain.storeAccountAndPassword(account: account, password: password.data(using: .utf8)!)
+        let success = keychain.writeAccountAndPassword(account: account, password: password.data(using: .utf8)!)
         if success {
             print("store success")
         } else {
@@ -38,7 +38,7 @@ class KeychainViewController: UIViewController {
     }
     
     @IBAction func queryAction(_ sender: Any) {
-        guard let result = keychain.queryAccountAndPassword() else {
+        guard let result = keychain.readAccountAndPassword() else {
             print("query failure")
             accountLabel.text = ""
             passwordLabel.text = ""

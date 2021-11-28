@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    let titles = ["Keychain"]
+    let titles = ["Keychain", "ModelAnimator"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
         if indexPath.row == 0 {
             navigationController?.pushViewController(KeychainViewController(), animated: true)
+            return
+        }
+        if indexPath.row == 1 {
+            navigationController?.pushViewController(PresentingViewController(), animated: true)
             return
         }
     }

@@ -31,6 +31,11 @@
 		ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */; };
 		ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */; };
 		ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E192752406F008BA1DB /* Keychain.swift */; };
+		ADF36E2327537258008BA1DB /* ModelAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E2227537258008BA1DB /* ModelAnimator.swift */; };
+		ADF36E2827537D3D008BA1DB /* PresentingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E2627537D3D008BA1DB /* PresentingViewController.swift */; };
+		ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF36E2727537D3D008BA1DB /* PresentingViewController.xib */; };
+		ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E2A27537D49008BA1DB /* PresentedViewController.swift */; };
+		ADF36E2D27537D49008BA1DB /* PresentedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF36E2B27537D49008BA1DB /* PresentedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainViewController.swift; sourceTree = "<group>"; };
 		ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeychainViewController.xib; sourceTree = "<group>"; };
 		ADF36E192752406F008BA1DB /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		ADF36E2227537258008BA1DB /* ModelAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAnimator.swift; sourceTree = "<group>"; };
+		ADF36E2627537D3D008BA1DB /* PresentingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingViewController.swift; sourceTree = "<group>"; };
+		ADF36E2727537D3D008BA1DB /* PresentingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentingViewController.xib; sourceTree = "<group>"; };
+		ADF36E2A27537D49008BA1DB /* PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
+		ADF36E2B27537D49008BA1DB /* PresentedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,7 @@
 				ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */,
 				ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */,
 				ADF36E192752406F008BA1DB /* Keychain.swift */,
+				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -131,10 +142,30 @@
 		ADF36E1427523FB2008BA1DB /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				ADF36E2527537D10008BA1DB /* ModelAnimator */,
+				ADF36E2427537D04008BA1DB /* Keychain */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		ADF36E2427537D04008BA1DB /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
 				ADF36E1527523FE2008BA1DB /* KeychainViewController.swift */,
 				ADF36E1627523FE2008BA1DB /* KeychainViewController.xib */,
 			);
-			path = Test;
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		ADF36E2527537D10008BA1DB /* ModelAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				ADF36E2627537D3D008BA1DB /* PresentingViewController.swift */,
+				ADF36E2727537D3D008BA1DB /* PresentingViewController.xib */,
+				ADF36E2A27537D49008BA1DB /* PresentedViewController.swift */,
+				ADF36E2B27537D49008BA1DB /* PresentedViewController.xib */,
+			);
+			path = ModelAnimator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF36DA02750FCA3008BA1DB /* LaunchScreen.storyboard in Resources */,
+				ADF36E2D27537D49008BA1DB /* PresentedViewController.xib in Resources */,
+				ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */,
 				ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */,
 				ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */,
 				ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */,
@@ -221,8 +254,11 @@
 				ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */,
 				ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */,
 				ADF36DC32750FE1A008BA1DB /* Int+Tools.swift in Sources */,
+				ADF36E2327537258008BA1DB /* ModelAnimator.swift in Sources */,
+				ADF36E2827537D3D008BA1DB /* PresentingViewController.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,
 				ADF36DC22750FE1A008BA1DB /* UIViewController+Tools.swift in Sources */,
+				ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */,
 				ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */,
 				ADF36D942750FCA1008BA1DB /* AppDelegate.swift in Sources */,
 				ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */,

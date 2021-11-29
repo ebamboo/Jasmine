@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A02754946300912771 /* UITableView+Tools.swift */; };
+		ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A32754982800912771 /* CacheHeightViewController.swift */; };
+		ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A42754982800912771 /* CacheHeightViewController.xib */; };
+		ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A7275498C200912771 /* CacheTableViewCell.swift */; };
+		ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A8275498C200912771 /* CacheTableViewCell.xib */; };
 		ADF36D942750FCA1008BA1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36D932750FCA1008BA1DB /* AppDelegate.swift */; };
 		ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36D972750FCA1008BA1DB /* ViewController.swift */; };
 		ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF36D992750FCA1008BA1DB /* Main.storyboard */; };
@@ -39,6 +44,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADCC89A02754946300912771 /* UITableView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Tools.swift"; sourceTree = "<group>"; };
+		ADCC89A32754982800912771 /* CacheHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHeightViewController.swift; sourceTree = "<group>"; };
+		ADCC89A42754982800912771 /* CacheHeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheHeightViewController.xib; sourceTree = "<group>"; };
+		ADCC89A7275498C200912771 /* CacheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTableViewCell.swift; sourceTree = "<group>"; };
+		ADCC89A8275498C200912771 /* CacheTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheTableViewCell.xib; sourceTree = "<group>"; };
 		ADF36D902750FCA1008BA1DB /* Jasmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jasmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF36D932750FCA1008BA1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF36D972750FCA1008BA1DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +93,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADCC89A2275497F700912771 /* 缓存UITableView 高度 */ = {
+			isa = PBXGroup;
+			children = (
+				ADCC89A32754982800912771 /* CacheHeightViewController.swift */,
+				ADCC89A42754982800912771 /* CacheHeightViewController.xib */,
+				ADCC89A7275498C200912771 /* CacheTableViewCell.swift */,
+				ADCC89A8275498C200912771 /* CacheTableViewCell.xib */,
+			);
+			path = "缓存UITableView 高度";
+			sourceTree = "<group>";
+		};
 		ADF36D872750FCA1008BA1DB = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +147,7 @@
 				ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */,
 				ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */,
 				ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */,
+				ADCC89A02754946300912771 /* UITableView+Tools.swift */,
 				ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */,
 				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
 				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
@@ -142,6 +164,7 @@
 		ADF36E1427523FB2008BA1DB /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				ADCC89A2275497F700912771 /* 缓存UITableView 高度 */,
 				ADF36E2527537D10008BA1DB /* ModelAnimator */,
 				ADF36E2427537D04008BA1DB /* Keychain */,
 			);
@@ -227,10 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF36DA02750FCA3008BA1DB /* LaunchScreen.storyboard in Resources */,
+				ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */,
 				ADF36E2D27537D49008BA1DB /* PresentedViewController.xib in Resources */,
 				ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */,
 				ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */,
 				ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */,
+				ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */,
 				ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +275,7 @@
 				ADF36DB82750FE1A008BA1DB /* Macros.swift in Sources */,
 				ADF36DBF2750FE1A008BA1DB /* Double+Tools.swift in Sources */,
 				ADF36DC72750FE1A008BA1DB /* UITableViewCell+Tools.swift in Sources */,
+				ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */,
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,
 				ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */,
 				ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */,
@@ -257,6 +283,8 @@
 				ADF36E2327537258008BA1DB /* ModelAnimator.swift in Sources */,
 				ADF36E2827537D3D008BA1DB /* PresentingViewController.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,
+				ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */,
+				ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */,
 				ADF36DC22750FE1A008BA1DB /* UIViewController+Tools.swift in Sources */,
 				ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */,
 				ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */,

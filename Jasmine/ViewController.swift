@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    let titles = ["Keychain", "ModelAnimator"]
+    let titles = ["Keychain", "ModelAnimator", "TableView高度缓存"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         if indexPath.row == 1 {
             navigationController?.pushViewController(PresentingViewController(), animated: true)
+            return
+        }
+        if indexPath.row == 2 {
+            navigationController?.pushViewController(CacheHeightViewController(), animated: true)
             return
         }
     }

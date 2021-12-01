@@ -100,6 +100,11 @@ public extension UIImage {
         return compressedImage(size: tempSize)
     }
     
+    ///
+    /// 苹果提供的图片压缩处理，极大地降低了内存使用
+    /// https://developer.apple.com/videos/play/wwdc2018/219/?time=26
+    ///
+    
     static func downsample(image data: Data, to pointSize: CGSize, scale: CGFloat) -> UIImage {
         let imageSourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
         let imageSource = CGImageSourceCreateWithData(data as CFData, imageSourceOptions)!
@@ -112,7 +117,6 @@ public extension UIImage {
         let downsampledImage = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, downsampleOptions)!
         return UIImage(cgImage: downsampledImage)
     }
-    
     static func downsample(image url: URL, to pointSize: CGSize, scale: CGFloat) -> UIImage {
         let imageSourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
         let imageSource = CGImageSourceCreateWithURL(url as CFURL, imageSourceOptions)!

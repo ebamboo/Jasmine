@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD351797275721E800D1721B /* Jasmine.podspec in Resources */ = {isa = PBXBuildFile; fileRef = AD351796275721E800D1721B /* Jasmine.podspec */; };
+		ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA452E1275B9E6200C15377 /* Stepper.swift */; };
 		ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A02754946300912771 /* UITableView+Tools.swift */; };
 		ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A32754982800912771 /* CacheHeightViewController.swift */; };
 		ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A42754982800912771 /* CacheHeightViewController.xib */; };
@@ -45,7 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD351796275721E800D1721B /* Jasmine.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jasmine.podspec; sourceTree = SOURCE_ROOT; };
+		AD351796275721E800D1721B /* Jasmine.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jasmine.podspec; sourceTree = SOURCE_ROOT; };
+		ADA452E1275B9E6200C15377 /* Stepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		ADCC89A02754946300912771 /* UITableView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Tools.swift"; sourceTree = "<group>"; };
 		ADCC89A32754982800912771 /* CacheHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHeightViewController.swift; sourceTree = "<group>"; };
 		ADCC89A42754982800912771 /* CacheHeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheHeightViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
 				ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */,
 				ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */,
+				ADA452E1275B9E6200C15377 /* Stepper.swift */,
 				ADF36E192752406F008BA1DB /* Keychain.swift */,
 				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
 			);
@@ -278,6 +281,7 @@
 				ADF36DBE2750FE1A008BA1DB /* Date+Tools.swift in Sources */,
 				ADF36DB82750FE1A008BA1DB /* Macros.swift in Sources */,
 				ADF36DBF2750FE1A008BA1DB /* Double+Tools.swift in Sources */,
+				ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */,
 				ADF36DC72750FE1A008BA1DB /* UITableViewCell+Tools.swift in Sources */,
 				ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */,
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,

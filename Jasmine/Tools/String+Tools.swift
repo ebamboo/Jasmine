@@ -200,7 +200,7 @@ public extension String {
 public extension String {
     
     func callPhone() {
-        if let url = URL(string: "telprompt://\(self)") {
+        if let url = URL(string: "telprompt://\(self)"), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }

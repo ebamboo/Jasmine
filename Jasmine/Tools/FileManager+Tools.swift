@@ -9,7 +9,9 @@ import UIKit
 
 public extension FileManager {
     
+    ///
     /// 全部可用磁盘
+    ///
     var diskAllSize: CGFloat? {
         let attributes = try? attributesOfFileSystem(forPath: NSHomeDirectory())
         return attributes?[.systemSize] as? CGFloat
@@ -19,7 +21,9 @@ public extension FileManager {
         return size / 1024 / 1024
     }
     
+    ///
     /// 空闲可用磁盘
+    ///
     var diskFreeSize: CGFloat? {
         let attributes = try? attributesOfFileSystem(forPath: NSHomeDirectory())
         return attributes?[.systemFreeSize] as? CGFloat

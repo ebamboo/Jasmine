@@ -7,7 +7,11 @@
 
 import UIKit
 
+///
+/// 评分控件
 /// 通过 ⭐️ 来评分或展示评分
+/// 常用于电商项目
+///
 public class StarPraiseView: UIStackView {
     
     ///

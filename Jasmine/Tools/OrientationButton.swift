@@ -7,7 +7,10 @@
 
 import UIKit
 
+///
 /// 自由控制 UIButton 的 image 和 text 位置和间距
+/// 只需要设置方向和距离即可
+///
 public class OrientationButton: UIButton {
 
     enum Orientation: Int {

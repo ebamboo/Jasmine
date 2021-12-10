@@ -7,11 +7,13 @@
 
 import UIKit
 
+///
 /// 自定义模态动画
 /// 目前仅支持四个方向的动画
 /// 只需要把需要自定义模态动画的vc的属性transitioningDelegate
 /// 设置为 TransitioningDelegate 实例即可
 /// 注意 TransitioningDelegate 实例的生命周期
+///
 public class TransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
     public enum TransitionStyle {

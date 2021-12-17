@@ -15,6 +15,9 @@
 		AD63D1C927637A3F00F19301 /* RoundViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */; };
 		AD63D1CA27637A3F00F19301 /* RoundViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */; };
 		ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA452E1275B9E6200C15377 /* Stepper.swift */; };
+		ADB71301276C73CC008AE7DE /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */; };
+		ADB71305276C75C5008AE7DE /* FlowLayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB71303276C75C5008AE7DE /* FlowLayoutTestViewController.swift */; };
+		ADB71306276C75C5008AE7DE /* FlowLayoutTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB71304276C75C5008AE7DE /* FlowLayoutTestViewController.xib */; };
 		ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A02754946300912771 /* UITableView+Tools.swift */; };
 		ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A32754982800912771 /* CacheHeightViewController.swift */; };
 		ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A42754982800912771 /* CacheHeightViewController.xib */; };
@@ -60,6 +63,9 @@
 		AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewTestViewController.swift; sourceTree = "<group>"; };
 		AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundViewTestViewController.xib; sourceTree = "<group>"; };
 		ADA452E1275B9E6200C15377 /* Stepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		ADB71303276C75C5008AE7DE /* FlowLayoutTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutTestViewController.swift; sourceTree = "<group>"; };
+		ADB71304276C75C5008AE7DE /* FlowLayoutTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowLayoutTestViewController.xib; sourceTree = "<group>"; };
 		ADCC89A02754946300912771 /* UITableView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Tools.swift"; sourceTree = "<group>"; };
 		ADCC89A32754982800912771 /* CacheHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHeightViewController.swift; sourceTree = "<group>"; };
 		ADCC89A42754982800912771 /* CacheHeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheHeightViewController.xib; sourceTree = "<group>"; };
@@ -125,6 +131,15 @@
 				AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */,
 			);
 			path = "自定义UIView每个圆角大小RoundView";
+			sourceTree = "<group>";
+		};
+		ADB71302276C7589008AE7DE /* 自定义UICollectionViewFlowLayout  */ = {
+			isa = PBXGroup;
+			children = (
+				ADB71303276C75C5008AE7DE /* FlowLayoutTestViewController.swift */,
+				ADB71304276C75C5008AE7DE /* FlowLayoutTestViewController.xib */,
+			);
+			path = "自定义UICollectionViewFlowLayout ";
 			sourceTree = "<group>";
 		};
 		ADCC89A2275497F700912771 /* 缓存UITableView 高度 */ = {
@@ -195,6 +210,7 @@
 				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
 				AD63D1BD2760CA7600F19301 /* DashView.swift */,
 				AD63D1C42763751E00F19301 /* RoundView.swift */,
+				ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -202,6 +218,7 @@
 		ADF36E1427523FB2008BA1DB /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				ADB71302276C7589008AE7DE /* 自定义UICollectionViewFlowLayout  */,
 				AD63D1C6276379DF00F19301 /* 自定义UIView每个圆角大小RoundView */,
 				AD63D1BF2760CE9B00F19301 /* 自定义虚线视图DashView */,
 				ADCC89A2275497F700912771 /* 缓存UITableView 高度 */,
@@ -297,6 +314,7 @@
 				AD63D1C32760CEBB00F19301 /* DashTestViewController.xib in Resources */,
 				ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */,
 				ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */,
+				ADB71306276C75C5008AE7DE /* FlowLayoutTestViewController.xib in Resources */,
 				ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */,
 				ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */,
 				ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */,
@@ -332,6 +350,8 @@
 				ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */,
 				AD63D1C52763751E00F19301 /* RoundView.swift in Sources */,
 				ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */,
+				ADB71301276C73CC008AE7DE /* CollectionViewFlowLayout.swift in Sources */,
+				ADB71305276C75C5008AE7DE /* FlowLayoutTestViewController.swift in Sources */,
 				ADF36DC22750FE1A008BA1DB /* UIViewController+Tools.swift in Sources */,
 				ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */,
 				ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */,

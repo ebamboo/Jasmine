@@ -10,14 +10,14 @@ import UIKit
 ///
 /// 完全自定义 UIView 每个圆角的是否圆角以及该圆角的大小
 ///
-class RoundView: UIView {
+public class RoundView: UIView {
 
     @IBInspectable var topLeftRadius: CGFloat = 0.0
     @IBInspectable var topRightRadius: CGFloat = 0.0
     @IBInspectable var bottomRightRadius: CGFloat = 0.0
     @IBInspectable var bottomLeftRadius: CGFloat = 0.0
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         
         if topLeftRadius > 0.0 {

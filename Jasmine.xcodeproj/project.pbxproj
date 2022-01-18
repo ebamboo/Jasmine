@@ -39,7 +39,6 @@
 		ADF36DC02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */; };
 		ADF36DC12750FE1A008BA1DB /* UINavigationController+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */; };
 		ADF36DC22750FE1A008BA1DB /* UIViewController+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */; };
-		ADF36DC32750FE1A008BA1DB /* Int+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB32750FE1A008BA1DB /* Int+Tools.swift */; };
 		ADF36DC42750FE1A008BA1DB /* UIView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */; };
 		ADF36DC52750FE1A008BA1DB /* NSObject+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */; };
 		ADF36DC62750FE1A008BA1DB /* UIColor+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */; };
@@ -89,7 +88,6 @@
 		ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Tools.swift"; sourceTree = "<group>"; };
-		ADF36DB32750FE1A008BA1DB /* Int+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				ADF36DA82750FE1A008BA1DB /* Macros.swift */,
-				ADF36DB32750FE1A008BA1DB /* Int+Tools.swift */,
 				ADF36DAF2750FE1A008BA1DB /* Double+Tools.swift */,
 				ADF36DAE2750FE1A008BA1DB /* Date+Tools.swift */,
 				ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */,
@@ -343,7 +340,6 @@
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,
 				ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */,
 				ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */,
-				ADF36DC32750FE1A008BA1DB /* Int+Tools.swift in Sources */,
 				ADF36E2327537258008BA1DB /* ModelAnimator.swift in Sources */,
 				ADF36E2827537D3D008BA1DB /* PresentingViewController.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,

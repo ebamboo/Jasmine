@@ -60,6 +60,13 @@ public extension String {
         return predicate.evaluate(with: self)
     }
     
+    /// 只有数字和小数点
+    func onlyHasNumberAndDot() -> Bool {
+        let num = "^[0-9.]+$"
+        let predicate = NSPredicate(format: "SELF matches %@", num)
+        return predicate.evaluate(with: self)
+    }
+    
     func onlyHasLetter() -> Bool {
         let letter = "^[a-zA-Z]+$"
         let predicate = NSPredicate(format: "SELF matches %@", letter)
@@ -146,6 +153,13 @@ public extension String {
     /// 去除字符串开头和结尾的可能的空格
     func coreString() -> String {
         return trimmingCharacters(in: .whitespaces)
+    }
+    
+    /// 下标方法获取子字符串 调用如：string[2...5]
+    subscript(range: ClosedRange<Int>) -> String {
+        let fromIndex = index(startIndex, offsetBy: range.lowerBound)
+        let toIndex = index(startIndex, offsetBy: range.upperBound)
+        return String(self[fromIndex...toIndex])
     }
     
     func substring(from: Int) -> String? {

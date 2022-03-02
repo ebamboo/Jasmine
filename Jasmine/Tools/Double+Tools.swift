@@ -19,4 +19,17 @@ public extension Double {
         return Double.pi * self / 180
     }
     
+    ///
+    /// 转 Int
+    ///
+    var ceil: Int {
+        return Int(Darwin.ceil(self))
+    }
+    var floor: Int {
+        return Int(Darwin.floor(self))
+    }
+    var round: Int {
+        return Int(Darwin.round(self))
+    }
+    
 }

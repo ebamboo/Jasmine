@@ -10,6 +10,8 @@ import UIKit
 ///
 /// 完全自定义 UIView 每个圆角的是否圆角以及该圆角的大小
 ///
+/// 注意：布局变化时调用 setNeedsDisplay() 方法从而主动引起 draw() 调用
+///
 public class RoundView: UIView {
 
     @IBInspectable var topLeftRadius: CGFloat = 0.0

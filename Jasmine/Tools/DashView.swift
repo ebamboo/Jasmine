@@ -12,6 +12,8 @@ import UIKit
 /// 虚线宽度等于视图高度（水平方向）或者视图宽度（垂直方向）
 /// 使用时要设置 backgroundColor = .clear
 ///
+/// 注意：布局变化时调用 setNeedsDisplay() 方法从而主动引起 draw() 调用
+///
 public class DashView: UIView {
 
     /// 0：水平方向

@@ -11,19 +11,19 @@ import UIKit
 
 public extension String {
 
-    func isPhone() -> Bool {
+    var isPhone: Bool {
         let mobilePhone = "^1[3-9][0-9]{9}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", mobilePhone)
         return predicate.evaluate(with: self)
     }
     
-    func isEmail() -> Bool {
+    var isEmail: Bool {
         let email = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", email)
         return predicate.evaluate(with: self)
     }
     
-    func isIDNumber() -> Bool {
+    var isID: Bool {
         // 一、正则判断
         let ID = "^[1-9][0-9]{9}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])[0-9]{3}[0-9X]$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", ID)
@@ -47,69 +47,61 @@ public extension String {
         return checkCode == lastCode
     }
     
-    /// 通用账号判断：字母、数字、下划线
-    func isCommonAccount() -> Bool {
+    var isAccount: Bool {
         let num = "^[a-zA-Z0-9_]+$"
         let predicate = NSPredicate(format: "SELF matches %@", num)
         return predicate.evaluate(with: self)
     }
     
-    func onlyHasNumber() -> Bool {
+    var onlyHasNumber: Bool {
         let num = "^[0-9]+$"
         let predicate = NSPredicate(format: "SELF matches %@", num)
         return predicate.evaluate(with: self)
     }
     
-    /// 只有数字和小数点
-    func onlyHasNumberAndDot() -> Bool {
-        let num = "^[0-9.]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", num)
-        return predicate.evaluate(with: self)
-    }
-    
-    func onlyHasLetter() -> Bool {
+    var onlyHasLetter: Bool {
         let letter = "^[a-zA-Z]+$"
         let predicate = NSPredicate(format: "SELF matches %@", letter)
         return predicate.evaluate(with: self)
     }
     
-    func onlyHasUpperLetter() -> Bool {
+    var onlyHasUpperLetter: Bool {
         let upperLetter = "^[A-Z]+$"
         let predicate = NSPredicate(format: "SELF matches %@", upperLetter)
         return predicate.evaluate(with: self)
     }
     
-    func onlyHasLowerLetter() -> Bool {
+    var onlyHasLowerLetter: Bool {
         let lowerLetter = "^[a-z]+$"
         let predicate = NSPredicate(format: "SELF matches %@", lowerLetter)
         return predicate.evaluate(with: self)
     }
     
-    func onlyHasLetterAndNumber() -> Bool {
+    var onlyHasLetterAndNumber: Bool {
         let letterAndNumber = "^[a-zA-Z0-9]+$"
         let predicate = NSPredicate(format: "SELF matches %@", letterAndNumber)
         return predicate.evaluate(with: self)
     }
     
-    func onlyHasUpperLetterAndNumber() -> Bool {
+    var onlyHasUpperLetterAndNumber: Bool {
         let upperLetterAndNumber = "^[A-Z0-9]+$"
         let predicate = NSPredicate(format: "SELF matches %@", upperLetterAndNumber)
         return predicate.evaluate(with: self)
     }
     
-    func onlyHasLowerLetterAndNumber() -> Bool {
+    var onlyHasLowerLetterAndNumber: Bool {
         let lowerLetterAndNumber = "^[a-z0-9]+$"
         let predicate = NSPredicate(format: "SELF matches %@", lowerLetterAndNumber)
         return predicate.evaluate(with: self)
     }
     
-    func onlyHasChinese() -> Bool {
+    var onlyHasChinese: Bool {
         let chinese = "^[\u{4e00}-\u{9fa5}]+$"
         let predicate = NSPredicate(format: "SELF matches %@", chinese)
         return predicate.evaluate(with: self)
     }
     
-    func hasChinese() -> Bool {
+    var hasChinese: Bool {
         for i in 0..<count {
             let char = self[index(startIndex, offsetBy: i)]
             if "\u{4e00}" <= char, char <= "\u{9fa5}" {
@@ -119,7 +111,7 @@ public extension String {
         return false
     }
     
-    func hasSpace() -> Bool {
+    var hasSpace: Bool {
         return firstIndex(of: " ") != nil
     }
     
@@ -145,43 +137,38 @@ public extension String {
 
 public extension String {
     
-    /// 去除字符串中的空格
-    func noneSpaceString() -> String {
-        return replacingOccurrences(of: " ", with: "")
-    }
-    
-    /// 去除字符串开头和结尾的可能的空格
-    func coreString() -> String {
-        return trimmingCharacters(in: .whitespaces)
-    }
-    
-    /// 下标方法获取子字符串 调用如：string[2...5]
+    /// 下标方法获取子字符串，下标参数为闭区间。 调用如：string[2...5]
     subscript(range: ClosedRange<Int>) -> String {
         let fromIndex = index(startIndex, offsetBy: range.lowerBound)
         let toIndex = index(startIndex, offsetBy: range.upperBound)
         return String(self[fromIndex...toIndex])
     }
     
-    func substring(from: Int) -> String? {
+    /// 去除字符串开头和结尾的可能的空格
+    func core() -> String {
+        return trimmingCharacters(in: .whitespaces)
+    }
+    
+    func sub(from: Int) -> String? {
         guard 0 <= from, from < count else { return nil }
         let fromIndex = index(startIndex, offsetBy: from)
         return String(self[fromIndex...])
     }
     
-    func substring(to: Int) -> String? {
+    func sub(to: Int) -> String? {
         guard 0 <= to, to < count else { return nil }
         let toIndex = index(startIndex, offsetBy: to)
         return String(self[...toIndex])
     }
     
-    func substring(from: Int, to: Int) -> String? {
+    func sub(from: Int, to: Int) -> String? {
         guard 0 <= from, from <= to, to < count else { return nil }
         let fromIndex = index(startIndex, offsetBy: from)
         let toIndex = index(startIndex, offsetBy: to)
         return String(self[fromIndex...toIndex])
     }
     
-    func substring(from: Int, offset: Int) -> String? {
+    func sub(from: Int, offset: Int) -> String? {
         guard offset >= 0, 0 <= from, from + offset < count else { return nil }
         let fromIndex = index(startIndex, offsetBy: from)
         let toIndex = index(fromIndex, offsetBy: offset)
@@ -195,11 +182,6 @@ public extension String {
         temp = temp.applyingTransform(.stripDiacritics, reverse: false) ?? ""
         temp = temp.replacingOccurrences(of: " ", with: "")
         return temp.isEmpty ? nil : temp
-    }
-    
-    /// 获取拼音首字母
-    var pinyinFirst: String? {
-        return pinyin?.uppercased().substring(to: 0)
     }
     
     /// URL 编码字符串

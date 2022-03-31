@@ -20,8 +20,8 @@ public extension UIColor {
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }
     
-    convenience init(red256: Int, green256: Int, blue256: Int, alpha: CGFloat = 1.0) {
-        self.init(red: CGFloat(red256) / 255.0, green: CGFloat(green256) / 255.0, blue: CGFloat(blue256) / 255.0, alpha: alpha)
+    convenience init(red255: Int, green255: Int, blue255: Int, alpha: CGFloat = 1.0) {
+        self.init(red: CGFloat(red255) / 255.0, green: CGFloat(green255) / 255.0, blue: CGFloat(blue255) / 255.0, alpha: alpha)
     }
     
     static var randomColor: UIColor {

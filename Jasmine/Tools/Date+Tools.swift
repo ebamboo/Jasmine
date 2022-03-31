@@ -9,7 +9,7 @@ import Foundation
 
 public extension Date {
 
-    func chineseYearMonthDay() -> (year: String, month: String, day: String)? {
+    var chineseYearMonthDay: (year: String, month: String, day: String)? {
         let chineseYears = [
             "甲子", "乙丑", "丙寅", "丁卯", "戊辰", "己巳", "庚午", "辛未", "壬申", "癸酉",
             "甲戌", "乙亥", "丙子", "丁丑", "戊寅", "己卯", "庚辰", "辛己", "壬午", "癸未",

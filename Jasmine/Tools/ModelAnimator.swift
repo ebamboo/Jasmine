@@ -43,7 +43,7 @@ public class TransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
     
 }
 
-class ModelAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+private class ModelAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     let style: TransitioningDelegate.TransitionStyle
     let duration: TimeInterval

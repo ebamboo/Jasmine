@@ -24,7 +24,7 @@ public extension UIColor {
         self.init(red: CGFloat(red255) / 255.0, green: CGFloat(green255) / 255.0, blue: CGFloat(blue255) / 255.0, alpha: alpha)
     }
     
-    static var randomColor: UIColor {
+    static var random: UIColor {
         return UIColor(red: CGFloat(arc4random_uniform(256)) / 255.0, green: CGFloat(arc4random_uniform(256)) / 255.0, blue: CGFloat(arc4random_uniform(256)) / 255.0, alpha: 1.0)
     }
     

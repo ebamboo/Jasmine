@@ -15,7 +15,7 @@ public class CollectionViewFlowLayout: UICollectionViewFlowLayout {
     ///
     
     private var itemSizeReader: ((UICollectionView?) -> CGSize)?
-    func itemSizeReader(_ reader: @escaping (_ collectionView: UICollectionView?) -> CGSize) {
+    public func itemSizeReader(_ reader: @escaping (_ collectionView: UICollectionView?) -> CGSize) {
         itemSizeReader = reader
     }
     

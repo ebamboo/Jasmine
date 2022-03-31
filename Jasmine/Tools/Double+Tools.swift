@@ -9,6 +9,16 @@ import Foundation
 
 public extension Double {
     
+    ///
+    /// 时间戳转 Date
+    ///
+    var dateSince1970: Date {
+        return Date(timeIntervalSince1970: self)
+    }
+    var dateSinceNow: Date {
+        return Date(timeIntervalSinceNow: self)
+    }
+    
     /// 弧度转为角度
     var degree: Double {
         return self * 180 / Double.pi

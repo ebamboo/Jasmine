@@ -7,12 +7,12 @@
 
 import UIKit
 
-// MARK: - 验证
+// MARK: - 校验
 
 public extension String {
 
     var isPhone: Bool {
-        let mobilePhone = "^1[3-9][0-9]{9}$"
+        let mobilePhone = "^1[2-9][0-9]{9}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", mobilePhone)
         return predicate.evaluate(with: self)
     }
@@ -117,22 +117,6 @@ public extension String {
     
 }
 
-// MARK: - 计算尺寸
-
-public extension String {
-    
-    /// 给定 font 和 width 计算出字符串所占用尺寸的高度
-    func height(with font: UIFont, width: CGFloat) -> CGFloat {
-        let content = (self + "\n") as NSString
-        let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
-        let options = NSStringDrawingOptions.usesLineFragmentOrigin
-        let attributes = [NSAttributedString.Key.font: font]
-        let rect = content.boundingRect(with: size, options: options, attributes: attributes, context: nil)
-        return rect.size.height
-    }
-    
-}
-
 // MARK: - 子字符串
 
 public extension String {
@@ -142,11 +126,6 @@ public extension String {
         let fromIndex = index(startIndex, offsetBy: range.lowerBound)
         let toIndex = index(startIndex, offsetBy: range.upperBound)
         return String(self[fromIndex...toIndex])
-    }
-    
-    /// 去除字符串开头和结尾的可能的空格
-    func core() -> String {
-        return trimmingCharacters(in: .whitespaces)
     }
     
     func sub(from: Int) -> String? {
@@ -185,16 +164,32 @@ public extension String {
     }
     
     /// URL 编码字符串
-    var URLString: String? {
+    var url: String? {
         return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+    }
+    
+    /// 去除字符串开头和结尾的可能的空格
+    var core: String {
+        return trimmingCharacters(in: .whitespaces)
     }
     
 }
 
-// MARK: - 打电话
+// MARK: - 功能
 
 public extension String {
     
+    /// 给定 font 和 width 计算出字符串所占用尺寸的高度
+    func height(font: UIFont, width: CGFloat) -> CGFloat {
+        let text = (self + "\n") as NSString
+        let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        let options = NSStringDrawingOptions.usesLineFragmentOrigin
+        let attributes = [NSAttributedString.Key.font: font]
+        let rect = text.boundingRect(with: size, options: options, attributes: attributes, context: nil)
+        return rect.size.height
+    }
+    
+    /// 打电话
     func callPhone() {
         if let url = URL(string: "telprompt://\(self)"), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)

@@ -19,18 +19,21 @@ public extension Double {
         return Date(timeIntervalSinceNow: self)
     }
     
-    /// 弧度转为角度
+    ///
+    /// 1. 弧度转为角度
+    /// 2. 角度转为弧度
+    ///
     var degree: Double {
         return self * 180 / Double.pi
     }
-    
-    /// 角度转为弧度
     var radian: Double {
         return Double.pi * self / 180
     }
     
     ///
-    /// 转 Int
+    /// 1. 向上取整
+    /// 2. 向下取整
+    /// 3. 四舍五入取整
     ///
     var ceil: Int {
         return Int(Darwin.ceil(self))

@@ -20,10 +20,15 @@ public extension UIColor {
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }
     
+    /// 使用 [0~255] 范围的 RGB 初始化颜色
     convenience init(red255: Int, green255: Int, blue255: Int, alpha: CGFloat = 1.0) {
-        self.init(red: CGFloat(red255) / 255.0, green: CGFloat(green255) / 255.0, blue: CGFloat(blue255) / 255.0, alpha: alpha)
+        let r = CGFloat(red255) / 255.0
+        let g = CGFloat(green255) / 255.0
+        let b = CGFloat(blue255) / 255.0
+        self.init(red: r, green: g, blue: b, alpha: alpha)
     }
     
+    /// 获取一个随机颜色
     static var random: UIColor {
         return UIColor(red: CGFloat(arc4random_uniform(256)) / 255.0, green: CGFloat(arc4random_uniform(256)) / 255.0, blue: CGFloat(arc4random_uniform(256)) / 255.0, alpha: 1.0)
     }

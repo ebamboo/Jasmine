@@ -9,6 +9,7 @@ import Foundation
 
 public extension Date {
 
+    /// 获取 Date 对应的农历日期 (年, 月, 日)
     var chineseYearMonthDay: (year: String, month: String, day: String)? {
         let chineseYears = [
             "甲子", "乙丑", "丙寅", "丁卯", "戊辰", "己巳", "庚午", "辛未", "壬申", "癸酉",
@@ -26,14 +27,8 @@ public extension Date {
             "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十",
             "廿一", "廿二", "廿三", "廿四", "廿五", "廿六", "廿七", "廿八", "廿九", "三十"
         ]
-        let chineseCalendar = Calendar(identifier: .chinese)
-        let chineseComp = chineseCalendar.dateComponents([.year, .month, .day], from: self)
-        guard let yearInt = chineseComp.year,
-              let monthInt = chineseComp.month,
-              let dayInt = chineseComp.day
-        else {
-            return nil
-        }
+        let components = Calendar(identifier: .chinese).dateComponents([.year, .month, .day], from: self)
+        guard let yearInt = components.year, let monthInt = components.month, let dayInt = components.day else { return nil }
         let year = chineseYears[yearInt-1]
         let month = chineseMonths[monthInt-1]
         let day = chineseDays[dayInt-1]

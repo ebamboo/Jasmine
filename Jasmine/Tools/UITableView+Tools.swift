@@ -13,11 +13,28 @@ import UIKit
 ///
 public extension UITableView {
     
+    /// 读取 cell 高度
+    /// 一般在 heightForRow 从缓存读取高度
+    func readCellHeight(for indexPath: IndexPath) -> CGFloat? {
+        guard let height = cellHeightsInfo.object(forKey: indexPath as NSIndexPath) else { return nil }
+        return height.doubleValue
+    }
+
+    /// 存储 cell 高度
+    /// 一般在 willDisplay 获取 cell 高度进行缓存
+    func writeCellHeight(_ height: CGFloat, for indexPath: IndexPath) {
+        cellHeightsInfo.setObject(NSNumber(value: height), forKey: indexPath as NSIndexPath)
+    }
+    
+}
+
+private extension UITableView {
+    
     ///
     /// NSCache 缓存 cell 高度信息
     ///
-    private static var cell_heights_info = "cell_heights_info"
-    private var cellHeightsInfo: NSCache<NSIndexPath, NSNumber> {
+    static var cell_heights_info = "cell_heights_info"
+    var cellHeightsInfo: NSCache<NSIndexPath, NSNumber> {
         var info = objc_getAssociatedObject(self, &UITableView.cell_heights_info) as? NSCache<NSIndexPath, NSNumber>
         if info == nil {
             info = NSCache<NSIndexPath, NSNumber>()
@@ -25,23 +42,6 @@ public extension UITableView {
             objc_setAssociatedObject(self, &UITableView.cell_heights_info, info, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         return info!
-    }
-
-    /// 读取 cell 高度
-    /// 一般在 heightForRow 从缓存读取高度
-    func readCellHeight(for indexPath: IndexPath) -> CGFloat? {
-        let height = cellHeightsInfo.object(forKey: indexPath as NSIndexPath)
-        if height == nil {
-            return nil
-        } else {
-            return height!.doubleValue
-        }
-    }
-
-    /// 存储 cell 高度
-    /// 一般在 willDisplay 获取 cell 高度进行缓存
-    func writeCellHeight(_ height: CGFloat, for indexPath: IndexPath) {
-        cellHeightsInfo.setObject(NSNumber(value: height), forKey: indexPath as NSIndexPath)
     }
     
 }

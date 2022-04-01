@@ -28,7 +28,6 @@
 		ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF36D992750FCA1008BA1DB /* Main.storyboard */; };
 		ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF36D9C2750FCA3008BA1DB /* Assets.xcassets */; };
 		ADF36DA02750FCA3008BA1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF36D9E2750FCA3008BA1DB /* LaunchScreen.storyboard */; };
-		ADF36DB82750FE1A008BA1DB /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DA82750FE1A008BA1DB /* Macros.swift */; };
 		ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */; };
 		ADF36DBA2750FE1A008BA1DB /* StarPraiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */; };
 		ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */; };
@@ -77,7 +76,6 @@
 		ADF36D9C2750FCA3008BA1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADF36D9F2750FCA3008BA1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADF36DA12750FCA3008BA1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADF36DA82750FE1A008BA1DB /* Macros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
 		ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationButton.swift; sourceTree = "<group>"; };
 		ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarPraiseView.swift; sourceTree = "<group>"; };
 		ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tools.swift"; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 		ADF36DA72750FD8A008BA1DB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				ADF36DA82750FE1A008BA1DB /* Macros.swift */,
 				ADF36DAF2750FE1A008BA1DB /* Double+Tools.swift */,
 				ADF36DAE2750FE1A008BA1DB /* Date+Tools.swift */,
 				ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */,
@@ -331,7 +328,6 @@
 				ADF36DC52750FE1A008BA1DB /* NSObject+Tools.swift in Sources */,
 				AD63D1BE2760CA7600F19301 /* DashView.swift in Sources */,
 				ADF36DBE2750FE1A008BA1DB /* Date+Tools.swift in Sources */,
-				ADF36DB82750FE1A008BA1DB /* Macros.swift in Sources */,
 				ADF36DBF2750FE1A008BA1DB /* Double+Tools.swift in Sources */,
 				ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */,
 				ADF36DC72750FE1A008BA1DB /* UITableViewCell+Tools.swift in Sources */,

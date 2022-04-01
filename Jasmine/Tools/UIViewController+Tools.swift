@@ -9,6 +9,8 @@ import UIKit
 
 public extension UIViewController {
     
+    // MARK: - alert
+    
     func presentAlert(title: String?, messgae: String?, ensureTitle: String, ensureAction: (() -> Void)? = nil) {
         let vc = UIAlertController(title: title, message: messgae, preferredStyle: .alert)
         let ensureBtn = UIAlertAction(title: ensureTitle, style: .default) { _ in
@@ -41,6 +43,8 @@ public extension UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
+    // MARK: - sheet
+    
     func presentSheet(title: String?, messgae: String?, cancelTitle: String, cancelAction: @escaping (() -> Void), optionTitle: String, optionAction: @escaping (() -> Void)) {
         let vc = UIAlertController(title: title, message: messgae, preferredStyle: .actionSheet)
         let cancelBtn = UIAlertAction(title: cancelTitle, style: .cancel) { _ in
@@ -68,21 +72,21 @@ public extension UIViewController {
 
 public extension UIViewController {
     
-    func addChildViewController(_ child: UIViewController, in container: UIView, in rect: CGRect, completion: (() -> Void)?) {
+    func addChild(_ child: UIViewController, in container: UIView, in rect: CGRect, completion: (() -> Void)?) {
         addChild(child)
         child.view.frame = rect
         container.addSubview(child.view)
         completion?()
     }
     
-    func removeChildViewController(_ child: UIViewController, completion: (() -> Void)?) {
+    func removeChild(_ child: UIViewController, completion: (() -> Void)?) {
         child.view.removeFromSuperview()
         child.willMove(toParent: nil)
         child.removeFromParent()
         completion?()
     }
     
-    func removeFromParentViewController(completion: (() -> Void)?) {
+    func removeFromParent(completion: (() -> Void)?) {
         view.removeFromSuperview()
         willMove(toParent: nil)
         removeFromParent()

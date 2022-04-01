@@ -7,8 +7,6 @@
 
 import UIKit
 
-// MARK: - 校验
-
 public extension String {
 
     var isPhone: Bool {
@@ -53,54 +51,6 @@ public extension String {
         return predicate.evaluate(with: self)
     }
     
-    var onlyHasNumber: Bool {
-        let num = "^[0-9]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", num)
-        return predicate.evaluate(with: self)
-    }
-    
-    var onlyHasLetter: Bool {
-        let letter = "^[a-zA-Z]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", letter)
-        return predicate.evaluate(with: self)
-    }
-    
-    var onlyHasUpperLetter: Bool {
-        let upperLetter = "^[A-Z]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", upperLetter)
-        return predicate.evaluate(with: self)
-    }
-    
-    var onlyHasLowerLetter: Bool {
-        let lowerLetter = "^[a-z]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", lowerLetter)
-        return predicate.evaluate(with: self)
-    }
-    
-    var onlyHasLetterAndNumber: Bool {
-        let letterAndNumber = "^[a-zA-Z0-9]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", letterAndNumber)
-        return predicate.evaluate(with: self)
-    }
-    
-    var onlyHasUpperLetterAndNumber: Bool {
-        let upperLetterAndNumber = "^[A-Z0-9]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", upperLetterAndNumber)
-        return predicate.evaluate(with: self)
-    }
-    
-    var onlyHasLowerLetterAndNumber: Bool {
-        let lowerLetterAndNumber = "^[a-z0-9]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", lowerLetterAndNumber)
-        return predicate.evaluate(with: self)
-    }
-    
-    var onlyHasChinese: Bool {
-        let chinese = "^[\u{4e00}-\u{9fa5}]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", chinese)
-        return predicate.evaluate(with: self)
-    }
-    
     var hasChinese: Bool {
         for i in 0..<count {
             let char = self[index(startIndex, offsetBy: i)]
@@ -117,7 +67,25 @@ public extension String {
     
 }
 
-// MARK: - 子字符串
+public extension String {
+    
+    struct Predicate {
+        let rawValue: String
+        static let chinese = Predicate(rawValue: "^[\u{4e00}-\u{9fa5}]+$")
+        static let number = Predicate(rawValue: "^[0-9]+$")
+        static let letter = Predicate(rawValue: "^[a-zA-Z]+$")
+        static let lower = Predicate(rawValue: "^[a-z]+$")
+        static let upper = Predicate(rawValue: "^[A-Z]+$")
+        static let letterAndNumber = Predicate(rawValue: "^[a-zA-Z0-9]+$")
+        static let lowerAndNumber = Predicate(rawValue: "^[a-z0-9]+$")
+        static let upperAndNumber = Predicate(rawValue: "^[A-Z0-9]+$")
+    }
+    
+    func evaluate(_ predicate: Predicate) -> Bool {
+        return NSPredicate(format: "SELF matches %@", predicate.rawValue).evaluate(with: self)
+    }
+    
+}
 
 public extension String {
     
@@ -175,8 +143,6 @@ public extension String {
     
 }
 
-// MARK: - 功能
-
 public extension String {
     
     /// 给定 font 和 width 计算出字符串所占用尺寸的高度
@@ -190,7 +156,7 @@ public extension String {
     }
     
     /// 打电话
-    func callPhone() {
+    func call() {
         if let url = URL(string: "telprompt://\(self)"), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }

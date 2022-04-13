@@ -23,6 +23,9 @@
 		ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A42754982800912771 /* CacheHeightViewController.xib */; };
 		ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A7275498C200912771 /* CacheTableViewCell.swift */; };
 		ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A8275498C200912771 /* CacheTableViewCell.xib */; };
+		ADEFCFD72806BB59002139DC /* UIBarButtonItem+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */; };
+		ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */; };
+		ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */; };
 		ADF36D942750FCA1008BA1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36D932750FCA1008BA1DB /* AppDelegate.swift */; };
 		ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36D972750FCA1008BA1DB /* ViewController.swift */; };
 		ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF36D992750FCA1008BA1DB /* Main.storyboard */; };
@@ -69,6 +72,9 @@
 		ADCC89A42754982800912771 /* CacheHeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheHeightViewController.xib; sourceTree = "<group>"; };
 		ADCC89A7275498C200912771 /* CacheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTableViewCell.swift; sourceTree = "<group>"; };
 		ADCC89A8275498C200912771 /* CacheTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheTableViewCell.xib; sourceTree = "<group>"; };
+		ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Handler.swift"; sourceTree = "<group>"; };
+		ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Handler.swift"; sourceTree = "<group>"; };
+		ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControll+Handler.swift"; sourceTree = "<group>"; };
 		ADF36D902750FCA1008BA1DB /* Jasmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jasmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF36D932750FCA1008BA1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF36D972750FCA1008BA1DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +197,9 @@
 				ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */,
 				ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */,
 				ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */,
+				ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */,
+				ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */,
+				ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */,
 				ADCC89A02754946300912771 /* UITableView+Tools.swift */,
 				ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */,
 				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
@@ -322,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */,
 				ADF36DBA2750FE1A008BA1DB /* StarPraiseView.swift in Sources */,
 				ADF36DBD2750FE1A008BA1DB /* FileManager+Tools.swift in Sources */,
 				ADF36DC42750FE1A008BA1DB /* UIView+Tools.swift in Sources */,
@@ -350,9 +360,11 @@
 				ADF36D942750FCA1008BA1DB /* AppDelegate.swift in Sources */,
 				ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */,
 				AD63D1C22760CEBB00F19301 /* DashTestViewController.swift in Sources */,
+				ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */,
 				ADF36DC02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift in Sources */,
 				ADF36DC62750FE1A008BA1DB /* UIColor+Tools.swift in Sources */,
 				ADF36DC12750FE1A008BA1DB /* UINavigationController+Tools.swift in Sources */,
+				ADEFCFD72806BB59002139DC /* UIBarButtonItem+Handler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

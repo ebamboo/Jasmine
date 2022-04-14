@@ -9,61 +9,40 @@ import UIKit
 
 public extension UIViewController {
     
-    // MARK: - alert
-    
-    func presentAlert(title: String?, messgae: String?, ensureTitle: String, ensureAction: (() -> Void)? = nil) {
-        let vc = UIAlertController(title: title, message: messgae, preferredStyle: .alert)
-        let ensureBtn = UIAlertAction(title: ensureTitle, style: .default) { _ in
-            ensureAction?()
-        }
-        vc.addAction(ensureBtn)
-        present(vc, animated: true, completion: nil)
-    }
-    
-    func presentAlert(title: String?, messgae: String?, leftTitle: String, leftAction: @escaping (() -> Void), rightTitle: String, rightAction: @escaping (() -> Void)) {
+    func presentAlert(title: String?, messgae: String?, actions: [UIAlertAction] = []) {
         let vc = UIAlertController.init(title: title, message: messgae, preferredStyle: .alert)
-        let leftBtn = UIAlertAction(title: leftTitle, style: .default) { _ in
-            leftAction()
-        }
-        let rightBtn = UIAlertAction(title: rightTitle, style: .default) { _ in
-            rightAction()
-        }
-        vc.addAction(leftBtn)
-        vc.addAction(rightBtn)
+        for btn in actions { vc.addAction(btn) }
         present(vc, animated: true, completion: nil)
     }
     
-    func presentAlert(title: String?, messgae: String?, actions: [UIAlertAction]?) {
-        let vc = UIAlertController.init(title: title, message: messgae, preferredStyle: .alert)
-        if let actions = actions {
-            for action in actions {
-                vc.addAction(action)
-            }
-        }
-        present(vc, animated: true, completion: nil)
-    }
-    
-    // MARK: - sheet
-    
-    func presentSheet(title: String?, messgae: String?, cancelTitle: String, cancelAction: @escaping (() -> Void), optionTitle: String, optionAction: @escaping (() -> Void)) {
+    func presentSheet(title: String?, messgae: String?, actions: [UIAlertAction] = []) {
         let vc = UIAlertController(title: title, message: messgae, preferredStyle: .actionSheet)
-        let cancelBtn = UIAlertAction(title: cancelTitle, style: .cancel) { _ in
-            cancelAction()
+        for btn in actions { vc.addAction(btn) }
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func presentAlert(title: String?, messgae: String?, actionsTitle: [String], actionsHandler: @escaping (_ index: Int, _ action: UIAlertAction) -> Void) {
+        let vc = UIAlertController.init(title: title, message: messgae, preferredStyle: .alert)
+        for (index, actionTitle) in actionsTitle.enumerated() {
+            let btn = UIAlertAction(title: actionTitle, style: .default) { action in
+                actionsHandler(index, action)
+            }
+            vc.addAction(btn)
         }
-        let optionBtn = UIAlertAction(title: optionTitle, style: .default) { _ in
-            optionAction()
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func presentSheet(title: String?, messgae: String?, cancelTitle: String, cancelHandler: @escaping (_ action: UIAlertAction) -> Void, optionsTitle: [String], optionsHandler: @escaping (_ index: Int, _ action: UIAlertAction) -> Void) {
+        let vc = UIAlertController(title: title, message: messgae, preferredStyle: .actionSheet)
+        let cancelBtn = UIAlertAction(title: cancelTitle, style: .cancel) { action in
+            cancelHandler(action)
         }
         vc.addAction(cancelBtn)
-        vc.addAction(optionBtn)
-        present(vc, animated: true, completion: nil)
-    }
-    
-    func presentSheet(title: String?, messgae: String?, actions: [UIAlertAction]?) {
-        let vc = UIAlertController(title: title, message: messgae, preferredStyle: .actionSheet)
-        if let actions = actions {
-            for action in actions {
-                vc.addAction(action)
+        for (index, optionTitle) in optionsTitle.enumerated() {
+            let optionBtn = UIAlertAction(title: optionTitle, style: .default) { action in
+                optionsHandler(index, action)
             }
+            vc.addAction(optionBtn)
         }
         present(vc, animated: true, completion: nil)
     }

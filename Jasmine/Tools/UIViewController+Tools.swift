@@ -9,20 +9,25 @@ import UIKit
 
 public extension UIViewController {
     
-    func presentAlert(title: String?, messgae: String?, actions: [UIAlertAction] = []) {
-        let vc = UIAlertController.init(title: title, message: messgae, preferredStyle: .alert)
+    func presentAlert(title: String?, message: String?, actions: [UIAlertAction] = []) {
+        let vc = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         for btn in actions { vc.addAction(btn) }
         present(vc, animated: true, completion: nil)
     }
     
-    func presentSheet(title: String?, messgae: String?, actions: [UIAlertAction] = []) {
-        let vc = UIAlertController(title: title, message: messgae, preferredStyle: .actionSheet)
+    func presentSheet(title: String?, message: String?, actions: [UIAlertAction] = []) {
+        let vc = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         for btn in actions { vc.addAction(btn) }
         present(vc, animated: true, completion: nil)
     }
     
-    func presentAlert(title: String?, messgae: String?, actionsTitle: [String], actionsHandler: @escaping (_ index: Int, _ action: UIAlertAction) -> Void) {
-        let vc = UIAlertController.init(title: title, message: messgae, preferredStyle: .alert)
+    func presentAlert(
+        title: String?,
+        message: String?,
+        actionsTitle: String...,
+        actionsHandler: @escaping (_ index: Int, _ action: UIAlertAction) -> Void
+    ) {
+        let vc = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         for (index, actionTitle) in actionsTitle.enumerated() {
             let btn = UIAlertAction(title: actionTitle, style: .default) { action in
                 actionsHandler(index, action)
@@ -32,8 +37,15 @@ public extension UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    func presentSheet(title: String?, messgae: String?, cancelTitle: String, cancelHandler: @escaping (_ action: UIAlertAction) -> Void, optionsTitle: [String], optionsHandler: @escaping (_ index: Int, _ action: UIAlertAction) -> Void) {
-        let vc = UIAlertController(title: title, message: messgae, preferredStyle: .actionSheet)
+    func presentSheet(
+        title: String?,
+        message: String?,
+        cancelTitle: String,
+        cancelHandler: @escaping (_ action: UIAlertAction) -> Void,
+        optionsTitle: String...,
+        optionsHandler: @escaping (_ index: Int, _ action: UIAlertAction) -> Void
+    ) {
+        let vc = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let cancelBtn = UIAlertAction(title: cancelTitle, style: .cancel) { action in
             cancelHandler(action)
         }

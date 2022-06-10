@@ -8,6 +8,26 @@
 import UIKit
 
 ///
+/// 部分刷新快捷方法
+///
+public extension UITableView {
+    
+    /// 自定义快捷刷新 rows
+    func reloadRows(_ rows: Int..., in section: Int = 0, with animation: UITableView.RowAnimation = .none) {
+        let indexPaths = rows.map { row in
+            IndexPath(row: row, section: section)
+        }
+        reloadRows(at: indexPaths, with: animation)
+    }
+    
+    /// 自定义快捷刷新 sections
+    func reloadSections(_ sections: Int..., with animation: UITableView.RowAnimation = .none) {
+        reloadSections(IndexSet(sections), with: animation)
+    }
+    
+}
+
+///
 ///        ！！！注意 ！！！
 /// 如果展示的信息动态变化则不应该缓存高度
 ///

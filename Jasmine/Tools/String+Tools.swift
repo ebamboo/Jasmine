@@ -131,8 +131,9 @@ public extension String {
         return temp.isEmpty ? nil : temp
     }
     
-    /// URL 编码字符串
-    var url: String? {
+    /// 把字符串转为 query of URL
+    /// 形如： "id=35&name=小明&address=杭州滨江海兴雅苑"  的字符串可用
+    var queryable: String? {
         return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     }
     

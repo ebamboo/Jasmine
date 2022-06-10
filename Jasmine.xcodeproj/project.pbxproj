@@ -23,6 +23,7 @@
 		ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A42754982800912771 /* CacheHeightViewController.xib */; };
 		ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A7275498C200912771 /* CacheTableViewCell.swift */; };
 		ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A8275498C200912771 /* CacheTableViewCell.xib */; };
+		ADCDE4CC283F847600B188B2 /* UICollectionView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCDE4CB283F847600B188B2 /* UICollectionView+Tools.swift */; };
 		ADEFCFD72806BB59002139DC /* UIBarButtonItem+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */; };
 		ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */; };
 		ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */; };
@@ -72,6 +73,7 @@
 		ADCC89A42754982800912771 /* CacheHeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheHeightViewController.xib; sourceTree = "<group>"; };
 		ADCC89A7275498C200912771 /* CacheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTableViewCell.swift; sourceTree = "<group>"; };
 		ADCC89A8275498C200912771 /* CacheTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheTableViewCell.xib; sourceTree = "<group>"; };
+		ADCDE4CB283F847600B188B2 /* UICollectionView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Tools.swift"; sourceTree = "<group>"; };
 		ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Handler.swift"; sourceTree = "<group>"; };
 		ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Handler.swift"; sourceTree = "<group>"; };
 		ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControll+Handler.swift"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */,
 				ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */,
 				ADCC89A02754946300912771 /* UITableView+Tools.swift */,
+				ADCDE4CB283F847600B188B2 /* UICollectionView+Tools.swift */,
 				ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */,
 				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
 				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
@@ -361,6 +364,7 @@
 				ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */,
 				AD63D1C22760CEBB00F19301 /* DashTestViewController.swift in Sources */,
 				ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */,
+				ADCDE4CC283F847600B188B2 /* UICollectionView+Tools.swift in Sources */,
 				ADF36DC02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift in Sources */,
 				ADF36DC62750FE1A008BA1DB /* UIColor+Tools.swift in Sources */,
 				ADF36DC12750FE1A008BA1DB /* UINavigationController+Tools.swift in Sources */,

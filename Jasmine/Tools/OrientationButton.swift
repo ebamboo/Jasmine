@@ -14,7 +14,7 @@ import UIKit
 public class OrientationButton: UIButton {
 
     enum Orientation: Int {
-        case LandscapeLeft      = 0 ///  图片在左
+        case LandscapeLeft      = 0 ///  图片在左------作为默认值，效果等同于系统默认 UIButton
         case LandscapeRight     = 1 ///  图片在右
         case Portrait           = 2 ///  图片在上
         case UpsideDown         = 3 ///  图片在下

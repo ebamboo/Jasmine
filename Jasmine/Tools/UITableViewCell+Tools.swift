@@ -10,18 +10,14 @@ import UIKit
 public extension UITableViewCell {
     
     var tableView: UITableView? {
-        var tempSuperview: UIView? = superview
+        var tempSuperview = superview
         while tempSuperview != nil {
-            if let nextResponder = tempSuperview?.next, nextResponder.isKind(of: UITableView.self) {
-                return nextResponder as? UITableView
+            if tempSuperview!.isKind(of: UITableView.self) {
+                return tempSuperview as? UITableView
             }
             tempSuperview = tempSuperview?.superview
         }
         return nil
-    }
-    
-    var indexPath: IndexPath? {
-        return tableView?.indexPath(for: self)
     }
     
 }

@@ -10,18 +10,14 @@ import UIKit
 public extension UICollectionViewCell {
     
     var collectionView: UICollectionView? {
-        var tempSuperview: UIView? = superview
+        var tempSuperview = superview
         while tempSuperview != nil {
-            if let nextResponder = tempSuperview?.next, nextResponder.isKind(of: UICollectionView.self) {
-                return nextResponder as? UICollectionView
+            if tempSuperview!.isKind(of: UICollectionView.self) {
+                return tempSuperview as? UICollectionView
             }
             tempSuperview = tempSuperview?.superview
         }
         return nil
-    }
-    
-    var indexPath: IndexPath? {
-        return collectionView?.indexPath(for: self)
     }
     
 }

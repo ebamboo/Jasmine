@@ -10,8 +10,9 @@ import Foundation
 public extension NSObject {
     
     /// 在 limit 秒内倒计时
-    func countdown(with limit: Int, progress: @escaping ((_ remainder: Int) -> Void), completion: @escaping (() -> Void)) {
-        guard limit > 0 else { return }
+    @discardableResult func countdown(with limit: Int, progress: @escaping (_ caller: NSObject?, _ remainder: Int) -> Void, completion: @escaping (_ caller: NSObject?) -> Void) -> DispatchSourceTimer? {
+        guard limit > 0 else { return nil }
+        weak var weakself = self
         var tempTime = limit
         let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
         timer.schedule(deadline: .now(), repeating: 1.0)
@@ -19,17 +20,17 @@ public extension NSObject {
             if tempTime <= 0 {
                 timer.cancel()
                 DispatchQueue.main.async {
-                    completion()
+                    completion(weakself)
                 }
             } else {
                 DispatchQueue.main.async {
-                    progress(tempTime)
+                    progress(weakself, tempTime)
                     tempTime -= 1
                 }
-                
             }
         }
         timer.resume()
+        return timer
     }
     
 }

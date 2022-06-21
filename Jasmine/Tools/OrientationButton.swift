@@ -14,27 +14,24 @@ import UIKit
 public class OrientationButton: UIButton {
 
     enum Orientation: Int {
-        case LandscapeLeft      = 0 ///  图片在左------作为默认值，效果等同于系统默认 UIButton
-        case LandscapeRight     = 1 ///  图片在右
-        case Portrait           = 2 ///  图片在上
-        case UpsideDown         = 3 ///  图片在下
+        case landscapeLeft      = 0 ///  图片在左------作为默认值，效果等同于系统默认 UIButton
+        case landscapeRight     = 1 ///  图片在右
+        case portrait           = 2 ///  图片在上
+        case upsideDown         = 3 ///  图片在下
     }
-    
-    var orientation: Orientation = .LandscapeLeft
-    @IBInspectable var orientationInt: Int {
-        get { orientation.rawValue }
-        set { orientation = Orientation(rawValue: newValue) ?? .LandscapeLeft }
-    }
+
+    @IBInspectable var orientation: Int = 0
     @IBInspectable var spacing: CGFloat = 0.0
     
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        layoutImageAndText()
-    }
+}
+
+public extension OrientationButton {
     
-    private func layoutImageAndText() {
-        switch orientation {
-        case .LandscapeLeft:
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let tempOrientation = Orientation(rawValue: orientation) ?? .landscapeLeft
+        switch tempOrientation {
+        case .landscapeLeft:
             titleEdgeInsets = UIEdgeInsets(
                 top: 0,
                 left: 0,
@@ -47,7 +44,7 @@ public class OrientationButton: UIButton {
                 bottom: 0,
                 right: 0
             )
-        case .LandscapeRight:
+        case .landscapeRight:
             titleEdgeInsets = UIEdgeInsets(
                 top: 0,
                 left: -2*(imageView?.frame.size.width ?? 0) - spacing,
@@ -60,7 +57,7 @@ public class OrientationButton: UIButton {
                 bottom: 0,
                 right: -2*(titleLabel?.frame.size.width ?? 0) - spacing
             )
-        case .Portrait:
+        case .portrait:
             titleEdgeInsets = UIEdgeInsets(
                 top: 0,
                 left: -(imageView?.frame.size.width ?? 0),
@@ -73,7 +70,7 @@ public class OrientationButton: UIButton {
                 bottom: 0,
                 right: -(titleLabel?.intrinsicContentSize.width ?? 0)
             )
-        case .UpsideDown:
+        case .upsideDown:
             titleEdgeInsets = UIEdgeInsets(
                 top: -(imageView?.frame.size.width ?? 0) - spacing/2,
                 left: -(imageView?.frame.size.width ?? 0),

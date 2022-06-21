@@ -162,12 +162,12 @@ public extension UIView {
 public extension UIView {
     
     var viewController: UIViewController? {
-        var view: UIView? = superview
-        while view != nil {
-            if let nextResponder = view?.next, nextResponder.isKind(of: UIViewController.self) {
+        var nextResponder = next
+        while nextResponder != nil {
+            if nextResponder!.isKind(of: UIViewController.self) {
                 return nextResponder as? UIViewController
             }
-            view = view?.superview
+            nextResponder = nextResponder?.next
         }
         return nil
     }

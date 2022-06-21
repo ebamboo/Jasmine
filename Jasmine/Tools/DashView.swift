@@ -25,8 +25,12 @@ public class DashView: UIView {
     @IBInspectable var lineUnitLength: CGFloat = 10
     /// 虚线单元之间间隔
     @IBInspectable var lineUnitSpacing: CGFloat = 4
+
+}
+
+public extension DashView {
     
-    public override func draw(_ rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         
         if direction == 0 {
@@ -43,5 +47,5 @@ public class DashView: UIView {
         strokeColor.setStroke()
         path.stroke()
     }
-
+    
 }

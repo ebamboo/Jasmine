@@ -16,7 +16,7 @@ public extension UIControl {
         actionHandlerTargets.append(target)
     }
     
-    /// 移除特定 events 及对应的 action handler
+    /// 移除特定 events 及对应的 action handler 响应事件
     func removeAllActionHandlers(for events: Event = .allEvents) {
         actionHandlerTargets.removeAll { target in
             let newEvents = target.events.subtracting(events) // 返回 target.events 减去 events 的结果

@@ -10,32 +10,23 @@ import UIKit
 public extension FileManager {
     
     ///
-    /// 全部磁盘容量
+    /// 1. 全部磁盘容量
+    /// 2. 可用磁盘容量
+    /// 单位：字节 B
     ///
     var systemSize: CGFloat? {
         let attributes = try? attributesOfFileSystem(forPath: NSHomeDirectory())
         return attributes?[.systemSize] as? CGFloat
     }
-    var systemSizeMB: CGFloat? {
-        guard let size = systemSize else { return nil }
-        return size / 1024 / 1024
-    }
-    
-    ///
-    /// 可用磁盘容量
-    ///
     var systemFreeSize: CGFloat? {
         let attributes = try? attributesOfFileSystem(forPath: NSHomeDirectory())
         return attributes?[.systemFreeSize] as? CGFloat
-    }
-    var systemFreeSizeMB: CGFloat? {
-        guard let size = systemFreeSize else { return nil }
-        return size / 1024 / 1024
     }
     
     ///
     /// 1. 文件大小
     /// 2. 文件夹大小
+    /// 单位：字节 B
     ///
     func fileSize(filePath: String) -> UInt? {
         let attributes = try? attributesOfItem(atPath: filePath)

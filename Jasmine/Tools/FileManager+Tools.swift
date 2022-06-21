@@ -12,24 +12,24 @@ public extension FileManager {
     ///
     /// 全部磁盘容量
     ///
-    var diskAllSize: CGFloat? {
+    var systemSize: CGFloat? {
         let attributes = try? attributesOfFileSystem(forPath: NSHomeDirectory())
         return attributes?[.systemSize] as? CGFloat
     }
-    var diskAllSizeMB: CGFloat? {
-        guard let size = diskAllSize else { return nil }
+    var systemSizeMB: CGFloat? {
+        guard let size = systemSize else { return nil }
         return size / 1024 / 1024
     }
     
     ///
     /// 可用磁盘容量
     ///
-    var diskFreeSize: CGFloat? {
+    var systemFreeSize: CGFloat? {
         let attributes = try? attributesOfFileSystem(forPath: NSHomeDirectory())
         return attributes?[.systemFreeSize] as? CGFloat
     }
-    var diskFreeSizeMB: CGFloat? {
-        guard let size = diskFreeSize else { return nil }
+    var systemFreeSizeMB: CGFloat? {
+        guard let size = systemFreeSize else { return nil }
         return size / 1024 / 1024
     }
     

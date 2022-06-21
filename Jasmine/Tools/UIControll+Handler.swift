@@ -16,10 +16,10 @@ public extension UIControl {
         actionHandlerTargets.append(target)
     }
     
-    /// 移除 action handler 响应事件
-    func removeAllActionHandlers(for events: Event) {
+    /// 移除特定 events 及对应的 action handler
+    func removeAllActionHandlers(for events: Event = .allEvents) {
         actionHandlerTargets.removeAll { target in
-            let newEvents = target.events.subtracting(events)
+            let newEvents = target.events.subtracting(events) // 返回 target.events 减去 events 的结果
             if newEvents.isEmpty {
                 return true
             } else {

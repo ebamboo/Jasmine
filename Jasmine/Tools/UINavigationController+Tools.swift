@@ -9,9 +9,9 @@ import UIKit
 
 public extension UINavigationController {
     
-    func pushViewController(_ viewController: UIViewController, hideBottomBar: Bool, hideBackItem: Bool, animated: Bool) {
-        viewController.hidesBottomBarWhenPushed = hideBottomBar
-        viewController.navigationItem.hidesBackButton = hideBackItem
+    func pushViewController(_ viewController: UIViewController, hidesBottomBar: Bool, hidesBackButton: Bool, animated: Bool) {
+        viewController.hidesBottomBarWhenPushed = hidesBottomBar
+        viewController.navigationItem.hidesBackButton = hidesBackButton
         pushViewController(viewController, animated: animated)
     }
     

@@ -176,7 +176,7 @@
 		ADF36D922750FCA1008BA1DB /* Jasmine */ = {
 			isa = PBXGroup;
 			children = (
-				ADF36DA72750FD8A008BA1DB /* Tools */,
+				ADF36DA72750FD8A008BA1DB /* Source Files */,
 				ADF36E1427523FB2008BA1DB /* Test */,
 				ADF36D932750FCA1008BA1DB /* AppDelegate.swift */,
 				ADF36D972750FCA1008BA1DB /* ViewController.swift */,
@@ -189,36 +189,13 @@
 			path = Jasmine;
 			sourceTree = "<group>";
 		};
-		ADF36DA72750FD8A008BA1DB /* Tools */ = {
+		ADF36DA72750FD8A008BA1DB /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				ADF36DAF2750FE1A008BA1DB /* Double+Tools.swift */,
-				ADF36DAE2750FE1A008BA1DB /* Date+Tools.swift */,
-				ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */,
-				ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */,
-				ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */,
-				ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */,
-				ADCC89A02754946300912771 /* UITableView+Tools.swift */,
-				ADCDE4CB283F847600B188B2 /* UICollectionView+Tools.swift */,
-				ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */,
-				ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */,
-				ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */,
-				ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */,
-				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
-				ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */,
-				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
-				ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */,
-				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
-				ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */,
-				ADA452E1275B9E6200C15377 /* Stepper.swift */,
-				ADF36E192752406F008BA1DB /* Keychain.swift */,
-				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
-				ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */,
-				AD63D1BD2760CA7600F19301 /* DashView.swift */,
-				AD63D1C42763751E00F19301 /* RoundView.swift */,
-				ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */,
+				ADF9BC01286197F500A5E16E /* Category */,
+				ADF9BC022861980400A5E16E /* Foundation */,
 			);
-			path = Tools;
+			path = "Source Files";
 			sourceTree = "<group>";
 		};
 		ADF36E1427523FB2008BA1DB /* Test */ = {
@@ -252,6 +229,45 @@
 				ADF36E2B27537D49008BA1DB /* PresentedViewController.xib */,
 			);
 			path = ModelAnimator;
+			sourceTree = "<group>";
+		};
+		ADF9BC01286197F500A5E16E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				ADF36DAF2750FE1A008BA1DB /* Double+Tools.swift */,
+				ADF36DAE2750FE1A008BA1DB /* Date+Tools.swift */,
+				ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */,
+				ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */,
+				ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */,
+				ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */,
+				ADCC89A02754946300912771 /* UITableView+Tools.swift */,
+				ADCDE4CB283F847600B188B2 /* UICollectionView+Tools.swift */,
+				ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */,
+				ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */,
+				ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */,
+				ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */,
+				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
+				ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */,
+				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
+				ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */,
+				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		ADF9BC022861980400A5E16E /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */,
+				ADA452E1275B9E6200C15377 /* Stepper.swift */,
+				ADF36E192752406F008BA1DB /* Keychain.swift */,
+				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
+				ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */,
+				AD63D1BD2760CA7600F19301 /* DashView.swift */,
+				AD63D1C42763751E00F19301 /* RoundView.swift */,
+				ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -22,10 +22,12 @@ public class TransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
         case topToBottom
         case bottomToTop
     }
+    
     let presentStyle: TransitionStyle
     let presentDuration: TimeInterval
     let dismissStyle: TransitionStyle
     let dismissDuration: TimeInterval
+    
     public init(presentStyle: TransitionStyle, presentDuration: TimeInterval, dismissStyle: TransitionStyle, dismissDuration: TimeInterval) {
         self.presentStyle = presentStyle
         self.presentDuration = presentDuration
@@ -33,11 +35,15 @@ public class TransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
         self.dismissDuration = dismissDuration
     }
     
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+}
+
+public extension TransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return ModelAnimator(style: presentStyle, duration: presentDuration)
     }
     
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return ModelAnimator(style: dismissStyle, duration: dismissDuration)
     }
     

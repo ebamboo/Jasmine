@@ -19,7 +19,7 @@ class FlowLayoutTestViewController: UIViewController, UICollectionViewDataSource
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         // 旋转屏幕看下动态效果
-        layout.itemSizeReader { collectionView in
+        layout.itemSizeReader = { collectionView in
             return CGSize(width: 100, height: collectionView!.height)
         }
         

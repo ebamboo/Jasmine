@@ -24,7 +24,7 @@ public extension FileManager {
     }
     
     ///
-    /// 1. 文件大小
+    /// 1. 文件大小（文件路径必须包含后缀名）
     /// 2. 文件夹大小
     /// 单位：字节 B
     ///
@@ -34,7 +34,7 @@ public extension FileManager {
     }
     func folderSize(folderPath: String) -> UInt? {
         guard let subpaths = try? subpathsOfDirectory(atPath: folderPath) else { return nil }
-        return subpaths.reduce(into: 0) { $0 += fileSize(filePath: $1) ?? 0 }
+        return subpaths.reduce(into: 0) { $0 += fileSize(filePath: "\(folderPath)/\($1)") ?? 0 }
     }
     
 }

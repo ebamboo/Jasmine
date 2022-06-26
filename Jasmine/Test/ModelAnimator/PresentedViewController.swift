@@ -9,7 +9,7 @@ import UIKit
 
 class PresentedViewController: UIViewController {
     
-    let animator = TransitioningDelegate(presentStyle: .rightToLeft, presentDuration: 3, dismissStyle: .leftToRight, dismissDuration: 4)
+    let animator = TransitioningDelegate(presentStyle: .rightToLeft, presentDuration: 1.2, dismissStyle: .leftToRight, dismissDuration: 1.2)
     
     override func viewDidLoad() {
         super.viewDidLoad()

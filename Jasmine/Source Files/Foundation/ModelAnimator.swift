@@ -10,25 +10,30 @@ import UIKit
 ///
 /// 自定义模态动画
 /// 目前仅支持四个方向的动画
-/// 只需要把需要自定义模态动画的vc的属性transitioningDelegate
+/// 只需要把需要自定义模态动画的 vc 的属性 transitioningDelegate
 /// 设置为 TransitioningDelegate 实例即可
 /// 注意 TransitioningDelegate 实例的生命周期
 ///
 public class TransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
-    public enum TransitionStyle {
+    enum TransitionStyle {
         case leftToRight
         case rightToLeft
         case topToBottom
         case bottomToTop
     }
     
-    let presentStyle: TransitionStyle
-    let presentDuration: TimeInterval
-    let dismissStyle: TransitionStyle
-    let dismissDuration: TimeInterval
+    private let presentStyle: TransitionStyle
+    private let presentDuration: TimeInterval
+    private let dismissStyle: TransitionStyle
+    private let dismissDuration: TimeInterval
     
-    public init(presentStyle: TransitionStyle, presentDuration: TimeInterval, dismissStyle: TransitionStyle, dismissDuration: TimeInterval) {
+    init(
+        presentStyle: TransitionStyle = .rightToLeft,
+        presentDuration: TimeInterval = 0.3,
+        dismissStyle: TransitionStyle = .leftToRight,
+        dismissDuration: TimeInterval = 0.3
+    ) {
         self.presentStyle = presentStyle
         self.presentDuration = presentDuration
         self.dismissStyle = dismissStyle

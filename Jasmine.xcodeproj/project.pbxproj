@@ -18,6 +18,7 @@
 		ADB71301276C73CC008AE7DE /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */; };
 		ADB71305276C75C5008AE7DE /* FlowLayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB71303276C75C5008AE7DE /* FlowLayoutTestViewController.swift */; };
 		ADB71306276C75C5008AE7DE /* FlowLayoutTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB71304276C75C5008AE7DE /* FlowLayoutTestViewController.xib */; };
+		ADC43891286BF3BB00B43412 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC43890286BF3BB00B43412 /* UIView+Layout.swift */; };
 		ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A02754946300912771 /* UITableView+Tools.swift */; };
 		ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A32754982800912771 /* CacheHeightViewController.swift */; };
 		ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A42754982800912771 /* CacheHeightViewController.xib */; };
@@ -68,6 +69,7 @@
 		ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		ADB71303276C75C5008AE7DE /* FlowLayoutTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutTestViewController.swift; sourceTree = "<group>"; };
 		ADB71304276C75C5008AE7DE /* FlowLayoutTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowLayoutTestViewController.xib; sourceTree = "<group>"; };
+		ADC43890286BF3BB00B43412 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		ADCC89A02754946300912771 /* UITableView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Tools.swift"; sourceTree = "<group>"; };
 		ADCC89A32754982800912771 /* CacheHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHeightViewController.swift; sourceTree = "<group>"; };
 		ADCC89A42754982800912771 /* CacheHeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheHeightViewController.xib; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				ADF36DB22750FE1A008BA1DB /* UIViewController+Tools.swift */,
 				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
 				ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */,
+				ADC43890286BF3BB00B43412 /* UIView+Layout.swift */,
 				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
 				ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */,
 				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
@@ -382,6 +385,7 @@
 				ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */,
 				ADCDE4CC283F847600B188B2 /* UICollectionView+Tools.swift in Sources */,
 				ADF36DC02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift in Sources */,
+				ADC43891286BF3BB00B43412 /* UIView+Layout.swift in Sources */,
 				ADF36DC62750FE1A008BA1DB /* UIColor+Tools.swift in Sources */,
 				ADF36DC12750FE1A008BA1DB /* UINavigationController+Tools.swift in Sources */,
 				ADEFCFD72806BB59002139DC /* UIBarButtonItem+Handler.swift in Sources */,

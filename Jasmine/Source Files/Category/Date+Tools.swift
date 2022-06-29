@@ -8,7 +8,41 @@
 import Foundation
 
 public extension Date {
-
+    
+    /// date  string 转为 Date
+    init(dateString: String, dateFormat: String, timeZone: TimeZone = TimeZone.current) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .none
+        dateFormatter.timeZone = timeZone
+        dateFormatter.dateFormat = dateFormat
+        
+        self = dateFormatter.date(from: dateString) ?? Date()
+    }
+    
+    /// Date 转为 date string
+    func dateString(with dateFormat: String, timeZone: TimeZone = .current, locale: Locale = .current) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        dateFormatter.timeZone = timeZone
+        dateFormatter.locale = locale
+        
+        return dateFormatter.string(from: self)
+    }
+    
+    /// 指定当前日历日期时间生成 Date
+    init(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int) {
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = month
+        dateComponents.day = day
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        dateComponents.second = second
+        
+        self = Calendar.current.date(from: dateComponents) ?? Date()
+    }
+    
     /// 获取 Date 对应的农历日期 (年, 月, 日)
     var chineseYearMonthDay: (year: String, month: String, day: String)? {
         let chineseYears = [

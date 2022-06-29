@@ -10,16 +10,6 @@ import Foundation
 public extension Double {
     
     ///
-    /// 时间戳转 Date
-    ///
-    var dateSince1970: Date {
-        return Date(timeIntervalSince1970: self)
-    }
-    var dateSinceNow: Date {
-        return Date(timeIntervalSinceNow: self)
-    }
-    
-    ///
     /// 1. 弧度转为角度
     /// 2. 角度转为弧度
     ///

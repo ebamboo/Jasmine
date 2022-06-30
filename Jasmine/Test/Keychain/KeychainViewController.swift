@@ -53,7 +53,7 @@ class KeychainViewController: UIViewController {
     
     @IBAction func queryAllAccountsAction(_ sender: Any) {
         if let list = try? Keychain.readAccounts(service: service) {
-            accountLabel.text = list.reduce("\na", { partialResult, item in
+            accountLabel.text = list.reduce("\n", { partialResult, item in
                 return partialResult + item + "\n"
             })
             print("read all accounts ========== \(list)")

@@ -8,16 +8,10 @@
 import UIKit
 
 public extension String {
-
+    
     var isPhone: Bool {
         let mobilePhone = "^1[2-9][0-9]{9}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", mobilePhone)
-        return predicate.evaluate(with: self)
-    }
-    
-    var isEmail: Bool {
-        let email = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", email)
         return predicate.evaluate(with: self)
     }
     
@@ -45,12 +39,6 @@ public extension String {
         return checkCode == lastCode
     }
     
-    var isAccount: Bool {
-        let num = "^[a-zA-Z0-9_]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", num)
-        return predicate.evaluate(with: self)
-    }
-    
     var hasChinese: Bool {
         for i in 0..<count {
             let char = self[index(startIndex, offsetBy: i)]
@@ -65,10 +53,10 @@ public extension String {
         return firstIndex(of: " ") != nil
     }
     
-}
-
-public extension String {
-    
+    ///
+    /// 通用地检查字符串是否符合正则式所表达的 "规则"
+    /// 使用 Predicate(rawValue: "自定义正则式") 来检查自定义的正则式
+    ///
     struct Predicate {
         let rawValue: String
         static let chinese = Predicate(rawValue: "^[\u{4e00}-\u{9fa5}]+$")
@@ -80,7 +68,6 @@ public extension String {
         static let lowerAndNumber = Predicate(rawValue: "^[a-z0-9]+$")
         static let upperAndNumber = Predicate(rawValue: "^[A-Z0-9]+$")
     }
-    
     func evaluate(_ predicate: Predicate) -> Bool {
         return NSPredicate(format: "SELF matches %@", predicate.rawValue).evaluate(with: self)
     }
@@ -96,18 +83,21 @@ public extension String {
         return String(self[fromIndex...toIndex])
     }
     
+    /// 从 fromIndex 开始，包括 fromIndex
     func sub(from: Int) -> String? {
         guard 0 <= from, from < count else { return nil }
         let fromIndex = index(startIndex, offsetBy: from)
         return String(self[fromIndex...])
     }
     
+    /// 取到 toIndex，包括 toIndex
     func sub(to: Int) -> String? {
         guard 0 <= to, to < count else { return nil }
         let toIndex = index(startIndex, offsetBy: to)
         return String(self[...toIndex])
     }
     
+    /// 从 fromIndex 开始取到 toIndex，包括 fromIndex 和 toIndex
     func sub(from: Int, to: Int) -> String? {
         guard 0 <= from, from <= to, to < count else { return nil }
         let fromIndex = index(startIndex, offsetBy: from)
@@ -115,6 +105,9 @@ public extension String {
         return String(self[fromIndex...toIndex])
     }
     
+    /// offset 表示 toIndex 相对于 fromIndex 偏移量
+    /// "0123456".sub(from: 0, offset: 0) 返回 "0"
+    /// "0123456".sub(from: 2, offset: 2) 返回 "234"
     func sub(from: Int, offset: Int) -> String? {
         guard offset >= 0, 0 <= from, from + offset < count else { return nil }
         let fromIndex = index(startIndex, offsetBy: from)
@@ -123,12 +116,12 @@ public extension String {
     }
     
     /// 获取拼音
-    var pinyin: String? {
+    var pinyin: String {
         var temp = self
         temp = temp.applyingTransform(.mandarinToLatin, reverse: false) ?? ""
         temp = temp.applyingTransform(.stripDiacritics, reverse: false) ?? ""
         temp = temp.replacingOccurrences(of: " ", with: "")
-        return temp.isEmpty ? nil : temp
+        return temp
     }
     
     /// 把字符串转为 query of URL
@@ -137,23 +130,25 @@ public extension String {
         return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     }
     
-    /// 去除字符串开头和结尾的可能的空格
-    var core: String {
-        return trimmingCharacters(in: .whitespaces)
-    }
-    
 }
 
 public extension String {
     
-    /// 给定 font 和 width 计算出字符串所占用尺寸的高度
+    /// 给定 font 和 width 计算多行字符串所占用尺寸的高度
     func height(font: UIFont, width: CGFloat) -> CGFloat {
-        let text = (self + "\n") as NSString
+        let text = self as NSString
         let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         let options = NSStringDrawingOptions.usesLineFragmentOrigin
         let attributes = [NSAttributedString.Key.font: font]
         let rect = text.boundingRect(with: size, options: options, attributes: attributes, context: nil)
-        return rect.size.height
+        return rect.size.height + 1
+    }
+    
+    /// 给定 font 计算单行字符串所占用尺寸的宽度
+    func width(font: UIFont) -> CGFloat {
+        let text = self as NSString
+        let size = text.size(withAttributes: [NSAttributedString.Key.font: font])
+        return size.width + 1
     }
     
     /// 打电话

@@ -9,51 +9,64 @@ import UIKit
 
 class KeychainViewController: UIViewController {
 
-    let identifier = "item01"
     let service = "com.beizhu.demo01"
-    let accessGroup: String? = nil
-    
-    var keychain: Keychain!
     
     @IBOutlet weak var accountField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var accountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "key chain"
-        keychain = Keychain(identifier: identifier, service: service, accessGroup: accessGroup)
     }
 
     @IBAction func saveAction(_ sender: Any) {
-        guard let account = accountField.text, account.count > 0,
-              let password = passwordField.text, password.count > 0 else { return }
-        let success = keychain.writeAccountAndPassword(account: account, password: password.data(using: .utf8)!)
-        if success {
-            print("store success")
+        let account = accountField.text ?? ""
+        let password = passwordField.text ?? ""
+        if let _ = try? Keychain.saveData(password.data(using: .utf8)!, for: account, service: service) {
+            print("save ========== success")
         } else {
-            print("store failure")
+            print("save ========== failure")
         }
     }
     
     @IBAction func queryAction(_ sender: Any) {
-        guard let result = keychain.readAccountAndPassword() else {
-            print("query failure")
-            accountLabel.text = ""
-            passwordLabel.text = ""
-            return
+        let account = accountField.text ?? ""
+        if let data = try? Keychain.readData(for: account, service: service) {
+            passwordLabel.text = String(data: data, encoding: .utf8)
+            print("read ========== \(String(data: data, encoding: .utf8) ?? "成功空值")")
+        } else {
+            print("read ========== failure")
         }
-        accountLabel.text = result.account
-        passwordLabel.text = String(data: result.password, encoding: .utf8)!
     }
     
     @IBAction func clearAction(_ sender: Any) {
-        let success = keychain.reset()
-        if success {
-            print("reset success")
+        let account = accountField.text ?? ""
+        if let _ = try? Keychain.clearData(for: account, service: service) {
+            print("clear ========== success")
         } else {
-            print("reset failure")
+            print("clear ========== failure")
+        }
+    }
+    
+    
+    @IBAction func queryAllAccountsAction(_ sender: Any) {
+        if let list = try? Keychain.readAccounts(service: service) {
+            accountLabel.text = list.reduce("\na", { partialResult, item in
+                return partialResult + item + "\n"
+            })
+            print("read all accounts ========== \(list)")
+        } else {
+            print("read all accounts ========== failure")
+        }
+    }
+    
+    @IBAction func clearAllDataAction(_ sender: Any) {
+        if let _ = try? Keychain.clearData(for: nil, service: service) {
+            print("clear all data ========== success")
+        } else {
+            print("clear all data ========== failure")
         }
     }
     

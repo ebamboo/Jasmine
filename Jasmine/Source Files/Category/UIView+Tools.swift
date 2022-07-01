@@ -22,7 +22,7 @@ public extension UIView {
         return nil
     }
     
-    func isSubviewOfView(_ view: UIView) -> Bool {
+    func isSubview(of view: UIView) -> Bool {
         var tempView: UIView? = self
         while tempView != nil {
             if tempView! === view {
@@ -31,19 +31,6 @@ public extension UIView {
             tempView = tempView?.superview
         }
         return false
-    }
-    
-}
-
-// MARK: - 毛玻璃
-
-public extension UIView {
-    
-    func addEffect(style: UIBlurEffect.Style = .light) {
-        let effect = UIBlurEffect(style: style)
-        let effectView = UIVisualEffectView(effect: effect)
-        effectView.frame = bounds
-        addSubview(effectView)
     }
     
 }

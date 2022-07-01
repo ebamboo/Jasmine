@@ -21,7 +21,6 @@ public extension UIBarButtonItem {
         actionHandlerTarget = newTarget
     }
     
-    /// 设置或者重新设置响应事件
     func setActionHandler(_ handler: @escaping (UIBarButtonItem) -> Void) {
         let newTarget = ActionHandlerTarget(handler: handler)
         target = newTarget
@@ -43,13 +42,13 @@ private extension UIBarButtonItem {
         }
     }
     
-    static var ActionHandlerTargetKey = "ActionHandlerTargetKey"
+    static var action_handler_target_key = "action_handler_target_key"
     var actionHandlerTarget: ActionHandlerTarget? {
         get {
-            objc_getAssociatedObject(self, &Self.ActionHandlerTargetKey) as? ActionHandlerTarget
+            objc_getAssociatedObject(self, &Self.action_handler_target_key) as? ActionHandlerTarget
         }
         set {
-            objc_setAssociatedObject(self, &Self.ActionHandlerTargetKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &Self.action_handler_target_key, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     

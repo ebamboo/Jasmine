@@ -28,8 +28,9 @@ public extension UITableView {
 }
 
 ///
-///        ！！！注意 ！！！
-/// 如果展示的信息动态变化则不应该缓存高度
+/// 使用 NSCache 缓存 UITableViewCell 高度
+///
+/// 注意 ：如果展示的信息动态变化则不应该缓存高度
 ///
 public extension UITableView {
     
@@ -50,16 +51,13 @@ public extension UITableView {
 
 private extension UITableView {
     
-    ///
-    /// NSCache 缓存 cell 高度信息
-    ///
-    static var cell_heights_info = "cell_heights_info"
+    static var cell_heights_info_key = "cell_heights_info_key"
     var cellHeightsInfo: NSCache<NSIndexPath, NSNumber> {
-        var info = objc_getAssociatedObject(self, &UITableView.cell_heights_info) as? NSCache<NSIndexPath, NSNumber>
+        var info = objc_getAssociatedObject(self, &UITableView.cell_heights_info_key) as? NSCache<NSIndexPath, NSNumber>
         if info == nil {
             info = NSCache<NSIndexPath, NSNumber>()
             info?.countLimit = 99
-            objc_setAssociatedObject(self, &UITableView.cell_heights_info, info, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UITableView.cell_heights_info_key, info, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         return info!
     }

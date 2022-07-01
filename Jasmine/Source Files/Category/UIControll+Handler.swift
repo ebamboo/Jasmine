@@ -9,14 +9,14 @@ import UIKit
 
 public extension UIControl {
     
-    /// 添加 action Handler 响应事件
+    /// 添加响应 events 的 handler
     func addActionHandler(for events: Event, _ handler: @escaping (UIControl) -> Void) {
         let target = ActionHandlerTarget(events: events, handler: handler)
         addTarget(target, action: #selector(ActionHandlerTarget.invoke(_:)), for: target.events)
         actionHandlerTargets.append(target)
     }
     
-    /// 移除特定 events 及对应的 action handler 响应事件
+    /// 移除响应 events 的所有 handler
     func removeAllActionHandlers(for events: Event = .allEvents) {
         actionHandlerTargets.removeAll { target in
             let newEvents = target.events.subtracting(events) // 返回 target.events 减去 events 的结果
@@ -47,13 +47,13 @@ private extension UIControl {
         }
     }
     
-    static var ActionHandlerTargetsKey = "ActionHandlerTargetsKey"
+    static var action_handler_targets_key = "action_handler_targets_key"
     var actionHandlerTargets: [ActionHandlerTarget] {
         get {
-            objc_getAssociatedObject(self, &Self.ActionHandlerTargetsKey) as? [ActionHandlerTarget] ?? []
+            objc_getAssociatedObject(self, &Self.action_handler_targets_key) as? [ActionHandlerTarget] ?? []
         }
         set {
-            objc_setAssociatedObject(self, &Self.ActionHandlerTargetsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &Self.action_handler_targets_key, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     

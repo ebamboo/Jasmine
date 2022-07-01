@@ -55,26 +55,26 @@ public extension String {
     
     ///
     /// 通用地检查字符串是否符合正则式所表达的 "规则"
-    /// 使用 Predicate(rawValue: "自定义正则式") 或者 .custom("自定义正则式") 来检查自定义的正则式
+    /// 使用 Rules(rawValue: "自定义正则式") 或者 .custom("自定义正则式") 来检查自定义的正则式
     ///
     /// "*" 表示 {0, } 表示，"+" 表示 {1, } 表示，"?" 表示 {0, 1}
-    /// 
-    struct Predicate {
+    ///
+    struct Rules {
         let rawValue: String
         
-        static let chinese = Predicate(rawValue: "^[\u{4e00}-\u{9fa5}]+$")
-        static let number = Predicate(rawValue: "^[0-9]+$")
-        static let letter = Predicate(rawValue: "^[a-zA-Z]+$")
-        static let lower = Predicate(rawValue: "^[a-z]+$")
-        static let upper = Predicate(rawValue: "^[A-Z]+$")
-        static let letterAndNumber = Predicate(rawValue: "^[a-zA-Z0-9]+$")
-        static let lowerAndNumber = Predicate(rawValue: "^[a-z0-9]+$")
-        static let upperAndNumber = Predicate(rawValue: "^[A-Z0-9]+$")
+        static let chinese = Rules(rawValue: "^[\u{4e00}-\u{9fa5}]+$")
+        static let number = Rules(rawValue: "^[0-9]+$")
+        static let letter = Rules(rawValue: "^[a-zA-Z]+$")
+        static let lower = Rules(rawValue: "^[a-z]+$")
+        static let upper = Rules(rawValue: "^[A-Z]+$")
+        static let letterAndNumber = Rules(rawValue: "^[a-zA-Z0-9]+$")
+        static let lowerAndNumber = Rules(rawValue: "^[a-z0-9]+$")
+        static let upperAndNumber = Rules(rawValue: "^[A-Z0-9]+$")
         
-        static func custom(_ rawValue: String) -> Predicate { Predicate(rawValue: rawValue) }
+        static func custom(_ rawValue: String) -> Rules { Rules(rawValue: rawValue) }
     }
-    func evaluate(_ predicate: Predicate) -> Bool {
-        return NSPredicate(format: "SELF matches %@", predicate.rawValue).evaluate(with: self)
+    func evaluate(_ rules: Rules) -> Bool {
+        return NSPredicate(format: "SELF matches %@", rules.rawValue).evaluate(with: self)
     }
     
 }

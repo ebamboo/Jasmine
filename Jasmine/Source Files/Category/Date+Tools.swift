@@ -30,7 +30,7 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
-    /// 指定当前日历日期时间生成 Date
+    /// 指定当前日历的日期时间生成 Date
     init(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int) {
         var dateComponents = DateComponents()
         dateComponents.year = year

@@ -15,6 +15,8 @@
 		AD63D1C927637A3F00F19301 /* RoundViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */; };
 		AD63D1CA27637A3F00F19301 /* RoundViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */; };
 		ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA452E1275B9E6200C15377 /* Stepper.swift */; };
+		ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527D8286E8B03009ADAD5 /* String+Verify.swift */; };
+		ADB527DB286E8BDA009ADAD5 /* String+Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */; };
 		ADB71301276C73CC008AE7DE /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */; };
 		ADB71305276C75C5008AE7DE /* FlowLayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB71303276C75C5008AE7DE /* FlowLayoutTestViewController.swift */; };
 		ADB71306276C75C5008AE7DE /* FlowLayoutTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB71304276C75C5008AE7DE /* FlowLayoutTestViewController.xib */; };
@@ -66,6 +68,8 @@
 		AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewTestViewController.swift; sourceTree = "<group>"; };
 		AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundViewTestViewController.xib; sourceTree = "<group>"; };
 		ADA452E1275B9E6200C15377 /* Stepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		ADB527D8286E8B03009ADAD5 /* String+Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Verify.swift"; sourceTree = "<group>"; };
+		ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sub.swift"; sourceTree = "<group>"; };
 		ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		ADB71303276C75C5008AE7DE /* FlowLayoutTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutTestViewController.swift; sourceTree = "<group>"; };
 		ADB71304276C75C5008AE7DE /* FlowLayoutTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowLayoutTestViewController.xib; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
 				ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */,
 				ADC43890286BF3BB00B43412 /* UIView+Layout.swift */,
+				ADB527D8286E8B03009ADAD5 /* String+Verify.swift */,
+				ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */,
 				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
 				ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */,
 				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
@@ -372,9 +378,11 @@
 				ADF36E2827537D3D008BA1DB /* PresentingViewController.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,
 				ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */,
+				ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */,
 				AD63D1C52763751E00F19301 /* RoundView.swift in Sources */,
 				ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */,
 				ADB71301276C73CC008AE7DE /* CollectionViewFlowLayout.swift in Sources */,
+				ADB527DB286E8BDA009ADAD5 /* String+Sub.swift in Sources */,
 				ADB71305276C75C5008AE7DE /* FlowLayoutTestViewController.swift in Sources */,
 				ADF36DC22750FE1A008BA1DB /* UIViewController+Tools.swift in Sources */,
 				ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */,

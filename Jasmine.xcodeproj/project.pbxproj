@@ -14,6 +14,8 @@
 		AD63D1C52763751E00F19301 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C42763751E00F19301 /* RoundView.swift */; };
 		AD63D1C927637A3F00F19301 /* RoundViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */; };
 		AD63D1CA27637A3F00F19301 /* RoundViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */; };
+		AD8E0D22287173830016DD2F /* UIImage+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D21287173830016DD2F /* UIImage+Transform.swift */; };
+		AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */; };
 		ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA452E1275B9E6200C15377 /* Stepper.swift */; };
 		ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527D8286E8B03009ADAD5 /* String+Verify.swift */; };
 		ADB527DB286E8BDA009ADAD5 /* String+Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */; };
@@ -67,6 +69,8 @@
 		AD63D1C42763751E00F19301 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewTestViewController.swift; sourceTree = "<group>"; };
 		AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundViewTestViewController.xib; sourceTree = "<group>"; };
+		AD8E0D21287173830016DD2F /* UIImage+Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Transform.swift"; sourceTree = "<group>"; };
+		AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Inits.swift"; sourceTree = "<group>"; };
 		ADA452E1275B9E6200C15377 /* Stepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		ADB527D8286E8B03009ADAD5 /* String+Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Verify.swift"; sourceTree = "<group>"; };
 		ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sub.swift"; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 				ADB527D8286E8B03009ADAD5 /* String+Verify.swift */,
 				ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */,
 				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
+				AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */,
+				AD8E0D21287173830016DD2F /* UIImage+Transform.swift */,
 				ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */,
 			);
 			path = Category;
@@ -360,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */,
+				AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */,
 				ADF36DBA2750FE1A008BA1DB /* StarPraiseView.swift in Sources */,
 				ADF36DBD2750FE1A008BA1DB /* FileManager+Tools.swift in Sources */,
 				ADF36DC42750FE1A008BA1DB /* UIView+Tools.swift in Sources */,
@@ -374,6 +381,7 @@
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,
 				ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */,
 				ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */,
+				AD8E0D22287173830016DD2F /* UIImage+Transform.swift in Sources */,
 				ADF36E2327537258008BA1DB /* ModelAnimator.swift in Sources */,
 				ADF36E2827537D3D008BA1DB /* PresentingViewController.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,

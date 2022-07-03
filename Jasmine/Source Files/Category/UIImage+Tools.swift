@@ -141,68 +141,9 @@ public extension UIImage {
     func base64(quality: CGFloat = 1.0) -> String? {
         return jpegData(compressionQuality: quality)?.base64EncodedString(options: .lineLength64Characters)
     }
-    convenience init?(base64: String) {
-        guard let imageData = Data(base64Encoded: base64, options: .ignoreUnknownCharacters) else { return nil }
-        self.init(data: imageData)
-    }
     
-    /// 颜色转图片
-    convenience init?(color: UIColor) {
-        let rect = CGRect(x: 0, y: 0, width: 1.0, height: 1.0)
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        let contex = UIGraphicsGetCurrentContext()
-        contex?.setFillColor(color.cgColor)
-        contex?.fill(rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        guard let tempImage = newImage?.cgImage else { return nil }
-        self.init(cgImage: tempImage)
-    }
+ 
     
-    /// UIView 转图片
-    convenience init?(view: UIView) {
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
-        guard let contex = UIGraphicsGetCurrentContext() else { return nil }
-        view.layer.render(in: contex)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        guard let tempImage = newImage?.cgImage else { return nil }
-        self.init(cgImage: tempImage)
-    }
-    
-    /// 字符串转二维码图片
-    convenience init?(link: String, side: CGFloat) {
-        // 1. 创建一个二维码滤镜实例(CIFilter)
-        let filter = CIFilter(name: "CIQRCodeGenerator")
-        // 滤镜恢复默认设置
-        filter?.setDefaults()
-        
-        // 2. 给滤镜添加数据
-        let tempData = link.data(using: .utf8)
-        // 使用KVC的方式给filter赋值
-        filter?.setValue(tempData, forKey: "inputMessage")
-        //设置二维码的纠错水平，越高纠错水平越高，可以污损的范围越大
-        filter?.setValue("H", forKey: "inputCorrectionLevel")
-        
-        // 3. 生成二维码
-        guard let tempCGImage = filter?.outputImage else { return nil }
-        let tempRect = tempCGImage.extent.integral
-        let tempScale = min(side/tempRect.size.width, side/tempRect.size.height)
-        
-        // 4.创建bitmap
-        let tempWidth = Int(tempRect.size.width * tempScale)
-        let tempHeight = Int(tempRect.size.height * tempScale)
-        let cs = CGColorSpaceCreateDeviceGray()
-        let bitmapRef = CGContext(data: nil, width: tempWidth, height: tempHeight, bitsPerComponent: 8, bytesPerRow: 0, space: cs, bitmapInfo: 0)
-        let context = CIContext(options: nil)
-        guard let bitmapImage = context.createCGImage(tempCGImage, from: tempRect) else { return nil}
-        bitmapRef?.interpolationQuality = .none
-        bitmapRef?.scaleBy(x: tempScale, y: tempScale)
-        bitmapRef?.draw(bitmapImage, in: tempRect)
-        
-        // 5.保存bitmap到图片
-        guard let resultImage = bitmapRef?.makeImage() else { return nil }
-        self.init(cgImage: resultImage)
-    }
+   
     
 }

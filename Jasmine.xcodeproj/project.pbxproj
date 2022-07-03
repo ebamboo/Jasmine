@@ -255,11 +255,11 @@
 				ADF36DB12750FE1A008BA1DB /* UINavigationController+Tools.swift */,
 				ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */,
 				ADC43890286BF3BB00B43412 /* UIView+Layout.swift */,
+				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
 				ADB527D8286E8B03009ADAD5 /* String+Verify.swift */,
 				ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */,
 				ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */,
 				ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */,
-				ADF36DB42750FE1A008BA1DB /* UIView+Tools.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";

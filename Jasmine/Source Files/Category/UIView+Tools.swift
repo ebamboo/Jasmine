@@ -23,12 +23,23 @@ public extension UIView {
     }
     
     func isSubview(of view: UIView) -> Bool {
-        var tempView: UIView? = self
-        while tempView != nil {
-            if tempView! === view {
+        var tempSuperview: UIView? = self
+        while tempSuperview != nil {
+            if tempSuperview! === view {
                 return true
             }
-            tempView = tempView?.superview
+            tempSuperview = tempSuperview?.superview
+        }
+        return false
+    }
+    
+    func isSuperview(of view: UIView) -> Bool {
+        var tempSuperview: UIView? = view
+        while tempSuperview != nil {
+            if tempSuperview! === self {
+                return true
+            }
+            tempSuperview = tempSuperview?.superview
         }
         return false
     }
@@ -39,57 +50,28 @@ public extension UIView {
 
 public extension UIView {
     
-    private static var GLOWVIEW = "GLOWVIEW";
-    private var glowView: UIImageView? {
-        get {
-            return objc_getAssociatedObject(self, &UIView.GLOWVIEW) as? UIImageView
-        }
-        set {
-            objc_setAssociatedObject(self, &UIView.GLOWVIEW, newValue, .OBJC_ASSOCIATION_RETAIN)
-        }
-    }
-    
-    func glowOnce(with color: UIColor = .white) {
-        glow(with: color, fromIntensity: 0.1, toIntensity: 0.6, isRepeat: true, duration: 1.0)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            self.stopGlowing()
-        }
-    }
-    
-    func glow(with color: UIColor, fromIntensity: CGFloat, toIntensity: CGFloat, isRepeat: Bool, duration: CGFloat) {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        layer.render(in: context)
-        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
-        color.setFill()
-        path.fill(with: .sourceAtop, alpha: 1.0)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
-        UIGraphicsEndImageContext()
-        
-        let tempGlowView = UIImageView(image: image)
-        superview?.insertSubview(tempGlowView, aboveSubview: self)
-        tempGlowView.center = center
-        tempGlowView.alpha = 0
-        tempGlowView.layer.shadowColor = color.cgColor
-        tempGlowView.layer.shadowOffset = CGSize()
-        tempGlowView.layer.shadowRadius = 10
-        tempGlowView.layer.shadowOpacity = 1.0
-        
+    func startGlowing(with color: UIColor = .white, fromOpacity: CGFloat = 0.08, toOpacity: CGFloat = 0.6, duration: CGFloat = 1.0) {
+        guard superview?.viewWithTag(3141592653589793238) == nil else { return }
+        let glowingView = UIView(frame: frame)
+        glowingView.tag = 3141592653589793238
+        glowingView.backgroundColor = color
+        superview?.insertSubview(glowingView, aboveSubview: self)
+
         let animation = CABasicAnimation(keyPath: "opacity")
-        animation.fromValue = fromIntensity
-        animation.toValue = toIntensity
-        animation.repeatCount = isRepeat ? 24 * 60 * 60 : 0
+        animation.fromValue = fromOpacity
+        animation.toValue = toOpacity
+        animation.repeatCount = Float.greatestFiniteMagnitude
         animation.duration = CFTimeInterval(duration)
         animation.autoreverses = true
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        
-        tempGlowView.layer.add(animation, forKey: "pulse")
-        glowView = tempGlowView
+
+        glowingView.layer.add(animation, forKey: "pulse")
     }
-    
+
     func stopGlowing() {
-        glowView?.removeFromSuperview()
-        glowView = nil
+        var glowingView = superview?.viewWithTag(3141592653589793238)
+        glowingView?.removeFromSuperview()
+        glowingView = nil
     }
     
 }

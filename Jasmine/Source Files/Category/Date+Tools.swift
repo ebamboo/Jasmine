@@ -12,10 +12,8 @@ public extension Date {
     /// date  string 转为 Date
     init(dateString: String, dateFormat: String, timeZone: TimeZone = TimeZone.current) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .none
-        dateFormatter.timeStyle = .none
-        dateFormatter.timeZone = timeZone
         dateFormatter.dateFormat = dateFormat
+        dateFormatter.timeZone = timeZone
         
         self = dateFormatter.date(from: dateString) ?? Date()
     }

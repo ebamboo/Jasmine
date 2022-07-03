@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - 边角设置
+
 public extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {
@@ -39,9 +41,9 @@ public extension UIView {
     
 }
 
-public extension UIView {
+// MARK: - 只读属性
 
-    // MARK: - 只读属性
+public extension UIView {
     
     var boundsCenter: CGPoint {
         return CGPoint(x: bounds.size.width/2, y: bounds.size.height/2)
@@ -57,7 +59,11 @@ public extension UIView {
         return rect
     }
     
-    // MARK: - 改变位置
+}
+
+// MARK: - 改变位置
+
+public extension UIView {
     
     var top: CGFloat {
         get {
@@ -121,8 +127,12 @@ public extension UIView {
             frame.origin = newValue
         }
     }
+    
+}
 
-    // MARK: - 改变尺寸
+// MARK: - 改变尺寸
+
+public extension UIView {
 
     var width: CGFloat {
         get {

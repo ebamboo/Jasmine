@@ -31,22 +31,22 @@ public extension UIImage {
     func transfering(_ transform: Transform) -> UIImage? {
         switch transform {
         case .horizontalMirrored:
-            guard let tempCG = cgImage else { return nil }
-            return UIImage(cgImage: tempCG, scale: scale, orientation: .upMirrored)
+            guard let tempCGImage = cgImage else { return nil }
+            return UIImage(cgImage: tempCGImage, scale: scale, orientation: .upMirrored)
         case .verticalMirrored:
-            guard let tempCG = cgImage else { return nil }
-            return UIImage(cgImage: tempCG, scale: scale, orientation: .downMirrored)
+            guard let tempCGImage = cgImage else { return nil }
+            return UIImage(cgImage: tempCGImage, scale: scale, orientation: .downMirrored)
         case .upRotated:
             return self
         case .downRotated:
-            guard let tempCG = cgImage else { return nil }
-            return UIImage(cgImage: tempCG, scale: scale, orientation: .down)
+            guard let tempCGImage = cgImage else { return nil }
+            return UIImage(cgImage: tempCGImage, scale: scale, orientation: .down)
         case .leftRotated:
-            guard let tempCG = cgImage else { return nil }
-            return UIImage(cgImage: tempCG, scale: scale, orientation: .left)
+            guard let tempCGImage = cgImage else { return nil }
+            return UIImage(cgImage: tempCGImage, scale: scale, orientation: .left)
         case .rightRotated:
-            guard let tempCG = cgImage else { return nil }
-            return UIImage(cgImage: tempCG, scale: scale, orientation: .right)
+            guard let tempCGImage = cgImage else { return nil }
+            return UIImage(cgImage: tempCGImage, scale: scale, orientation: .right)
         case .angleRotated(let radian):
             // 计算旋转之后 rotatedSize
             let tempView = UIView(frame: CGRect(origin: .zero, size: size))

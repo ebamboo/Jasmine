@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepperTestViewController" customModule="Jasmine" customModuleProvider="target">
+            <connections>
+                <outlet property="testStepper" destination="YYu-Cm-vew" id="phX-vO-Q3b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-Cm-vew" customClass="Stepper" customModule="Jasmine" customModuleProvider="target">
+                    <rect key="frame" x="87" y="426" width="240" height="44"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Ih2-Wz-tZT"/>
+                        <constraint firstAttribute="width" constant="240" id="ewb-lV-3fc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="decrementNormalImage" value="decrement-normal"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="decrementDisableImage" value="decrement-disable"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="incrementNormalImage" value="increment-normal"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="incrementDisableImage" value="increment-disable"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YYu-Cm-vew" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BAs-wG-JUd"/>
+                <constraint firstItem="YYu-Cm-vew" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="P80-la-wCb"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="decrement-disable" width="20" height="20"/>
+        <image name="decrement-normal" width="20" height="20"/>
+        <image name="increment-disable" width="20" height="20"/>
+        <image name="increment-normal" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

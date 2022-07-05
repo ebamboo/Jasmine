@@ -16,6 +16,10 @@
 		AD63D1CA27637A3F00F19301 /* RoundViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */; };
 		AD8E0D22287173830016DD2F /* UIImage+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D21287173830016DD2F /* UIImage+Transform.swift */; };
 		AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */; };
+		AD8E0D342873EEFF0016DD2F /* StepperTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D322873EEFF0016DD2F /* StepperTestViewController.swift */; };
+		AD8E0D352873EEFF0016DD2F /* StepperTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8E0D332873EEFF0016DD2F /* StepperTestViewController.xib */; };
+		AD8E0D392873EF480016DD2F /* UIImageTransformTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D372873EF480016DD2F /* UIImageTransformTestViewController.swift */; };
+		AD8E0D3A2873EF480016DD2F /* UIImageTransformTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8E0D382873EF480016DD2F /* UIImageTransformTestViewController.xib */; };
 		ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA452E1275B9E6200C15377 /* Stepper.swift */; };
 		ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527D8286E8B03009ADAD5 /* String+Verify.swift */; };
 		ADB527DB286E8BDA009ADAD5 /* String+Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */; };
@@ -71,6 +75,10 @@
 		AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundViewTestViewController.xib; sourceTree = "<group>"; };
 		AD8E0D21287173830016DD2F /* UIImage+Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Transform.swift"; sourceTree = "<group>"; };
 		AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Inits.swift"; sourceTree = "<group>"; };
+		AD8E0D322873EEFF0016DD2F /* StepperTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTestViewController.swift; sourceTree = "<group>"; };
+		AD8E0D332873EEFF0016DD2F /* StepperTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepperTestViewController.xib; sourceTree = "<group>"; };
+		AD8E0D372873EF480016DD2F /* UIImageTransformTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformTestViewController.swift; sourceTree = "<group>"; };
+		AD8E0D382873EF480016DD2F /* UIImageTransformTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIImageTransformTestViewController.xib; sourceTree = "<group>"; };
 		ADA452E1275B9E6200C15377 /* Stepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		ADB527D8286E8B03009ADAD5 /* String+Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Verify.swift"; sourceTree = "<group>"; };
 		ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sub.swift"; sourceTree = "<group>"; };
@@ -147,6 +155,24 @@
 			path = "自定义UIView每个圆角大小RoundView";
 			sourceTree = "<group>";
 		};
+		AD8E0D312873EEB40016DD2F /* 自定义 Stepper */ = {
+			isa = PBXGroup;
+			children = (
+				AD8E0D322873EEFF0016DD2F /* StepperTestViewController.swift */,
+				AD8E0D332873EEFF0016DD2F /* StepperTestViewController.xib */,
+			);
+			path = "自定义 Stepper";
+			sourceTree = "<group>";
+		};
+		AD8E0D362873EF030016DD2F /* UIImage+Transform 测试 */ = {
+			isa = PBXGroup;
+			children = (
+				AD8E0D372873EF480016DD2F /* UIImageTransformTestViewController.swift */,
+				AD8E0D382873EF480016DD2F /* UIImageTransformTestViewController.xib */,
+			);
+			path = "UIImage+Transform 测试";
+			sourceTree = "<group>";
+		};
 		ADB71302276C7589008AE7DE /* 自定义UICollectionViewFlowLayout  */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +237,8 @@
 		ADF36E1427523FB2008BA1DB /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				AD8E0D362873EF030016DD2F /* UIImage+Transform 测试 */,
+				AD8E0D312873EEB40016DD2F /* 自定义 Stepper */,
 				ADB71302276C7589008AE7DE /* 自定义UICollectionViewFlowLayout  */,
 				AD63D1C6276379DF00F19301 /* 自定义UIView每个圆角大小RoundView */,
 				AD63D1BF2760CE9B00F19301 /* 自定义虚线视图DashView */,
@@ -346,11 +374,13 @@
 				ADF36DA02750FCA3008BA1DB /* LaunchScreen.storyboard in Resources */,
 				ADCC89A62754982800912771 /* CacheHeightViewController.xib in Resources */,
 				ADF36E2D27537D49008BA1DB /* PresentedViewController.xib in Resources */,
+				AD8E0D352873EEFF0016DD2F /* StepperTestViewController.xib in Resources */,
 				AD63D1CA27637A3F00F19301 /* RoundViewTestViewController.xib in Resources */,
 				AD351797275721E800D1721B /* Jasmine.podspec in Resources */,
 				AD63D1C32760CEBB00F19301 /* DashTestViewController.xib in Resources */,
 				ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */,
 				ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */,
+				AD8E0D3A2873EF480016DD2F /* UIImageTransformTestViewController.xib in Resources */,
 				ADB71306276C75C5008AE7DE /* FlowLayoutTestViewController.xib in Resources */,
 				ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */,
 				ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */,
@@ -386,6 +416,7 @@
 				ADF36E2827537D3D008BA1DB /* PresentingViewController.swift in Sources */,
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,
 				ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */,
+				AD8E0D392873EF480016DD2F /* UIImageTransformTestViewController.swift in Sources */,
 				ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */,
 				AD63D1C52763751E00F19301 /* RoundView.swift in Sources */,
 				ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */,
@@ -396,6 +427,7 @@
 				ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */,
 				ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */,
 				ADF36D942750FCA1008BA1DB /* AppDelegate.swift in Sources */,
+				AD8E0D342873EEFF0016DD2F /* StepperTestViewController.swift in Sources */,
 				ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */,
 				AD63D1C22760CEBB00F19301 /* DashTestViewController.swift in Sources */,
 				ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */,

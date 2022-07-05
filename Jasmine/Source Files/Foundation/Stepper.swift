@@ -8,143 +8,170 @@
 import UIKit
 
 ///
-/// 该控件是下单时购买商品数量编辑控件
+/// 该控件是商城商品数量编辑控件
 ///
-/// 可以通过加减按钮修改数量，也可以通过输入修改数量
-/// 临近 [minValue, maxValue] 边界时对应边界的按钮不可用
-/// 数量通过按钮和输入变化时会进行回调
-/// 输入方式对内容进行了限定：输入结果只能是 [minValue, maxValue] 的数字
+/// 注意：
+/// 1. 设置 value、minValue、maxValue 时，内部已保证 minValue 小于等于 value 小于等于 maxValue。
+/// 具体规则和实现请查看相关属性 didset 方法
+/// 2. 布局属性必须在控制属性之前设置才会生效
+/// 使用 xib 或者 storyboard 时，通过 the identity inspector -> User Defined Runtime Attributes 查看和调整顺序
 ///
 public class Stepper: UIView, UITextFieldDelegate {
     
-    // MARK: - public
+    // MARK: - 布局属性
     
-    ///
-    /// 布局设置
-    ///
+    /// decrementBtn--valueLabel--incrementBtn 之间间距
     @IBInspectable var itemSpacing: CGFloat = 8
+    /// decrementBtn 和 incrementBtn 的尺寸
     @IBInspectable var crementSize: CGSize = CGSize(width: 22, height: 22)
-    @IBInspectable var decrementNormalImage: UIImage? {
-        get {
-            decrementBtn.image(for: .normal)
-        }
-        set {
-            decrementBtn.setImage(newValue, for: .normal)
-        }
-    }
-    @IBInspectable var decrementDisableImage: UIImage? {
-        get {
-            decrementBtn.image(for: .disabled)
-        }
-        set {
-            decrementBtn.setImage(newValue, for: .disabled)
-        }
-    }
-    @IBInspectable var incrementNormalImage: UIImage? {
-        get {
-            incrementBtn.image(for: .normal)
-        }
-        set {
-            incrementBtn.setImage(newValue, for: .normal)
-        }
-    }
-    @IBInspectable var incrementDisableImage: UIImage? {
-        get {
-            incrementBtn.image(for: .disabled)
-        }
-        set {
-            incrementBtn.setImage(newValue, for: .disabled)
-        }
+    /// decrementBtn 可用状态图片
+    @IBInspectable var decrementNormalImage: UIImage?
+    /// decrementBtn 禁用状态图片
+    @IBInspectable var decrementDisableImage: UIImage?
+    /// incrementBtn 可用状态图片
+    @IBInspectable var incrementNormalImage: UIImage?
+    /// incrementBtn 禁用状态图片
+    @IBInspectable var incrementDisableImage: UIImage?
+    
+    /// value == minValue 时，是否禁用 decrementBtn
+    @IBInspectable var disableWhenMin: Bool = true
+    /// value == maxValue 时，是否禁用 incrementBtn
+    @IBInspectable var disableWhenMax: Bool = true
+    
+    // MARK: - 响应事件
+    
+    ///
+    /// disableWhenMin == false 且 value == minValue ，点击 decrementBtn 时调用
+    ///
+    var onClickDecrementWhenMin: ((_ value: Int) -> Void)?
+    func onClickDecrementWhenMin(handler: @escaping ((_ value: Int) -> Void)) {
+        onClickDecrementWhenMin = handler
     }
     
     ///
-    /// 值变化回调
+    /// disableWhenMax == false 且 value == maxValue ，点击 incrementBtn 时调用
     ///
-    private var valueDidChangeHandler: ((_ value: Int) -> Void)?
-    func valueDidChangeHandler(handler: @escaping ((_ value: Int) -> Void)) {
-        valueDidChangeHandler = handler
-    }
-    
-    /// 是否可以输入修改数量，默认可以编辑
-    @IBInspectable var inputable: Bool {
-        get {
-            return valueField.isEnabled
-        }
-        set {
-            valueField.isEnabled = newValue
-        }
+    var onClickIncrementWhenMax: ((_ value: Int) -> Void)?
+    func onClickIncrementWhenMax(handler: @escaping ((_ value: Int) -> Void)) {
+        onClickIncrementWhenMax = handler
     }
     
     ///
-    /// 核心功能
+    /// 通过按钮修改 value 时响应事件
+    /// minValue 小于 value 且 value 小于 maxValue，点击 decrementBtn 或者 incrementBtn 时调用
     ///
+    var onValueDidChangeHandler: ((_ value: Int) -> Void)?
+    func onValueDidChangeHandler(handler: @escaping ((_ value: Int) -> Void)) {
+        onValueDidChangeHandler = handler
+    }
+
+    // MARK: - 控制属性
+    
     @IBInspectable var minValue: Int = 1 {
         didSet {
-            if value < minValue {
+            if minValue > maxValue {
+                maxValue = minValue
+            }
+            if minValue > value {
                 value = minValue
             }
+            if disableWhenMin {
+                decrementBtn.isEnabled = value > minValue
+            } else {
+                decrementBtn.isEnabled = true
+            }
+            if disableWhenMax {
+                incrementBtn.isEnabled = value < maxValue
+            } else {
+                incrementBtn.isEnabled = true
+            }
+            valueLabel.text = "\(value)"
         }
     }
+    
     @IBInspectable var maxValue: Int = 99 {
         didSet {
-            if value > maxValue {
+            if maxValue < minValue {
+                minValue = maxValue
+            }
+            if maxValue < value {
                 value = maxValue
             }
-        }
-    }
-    var value: Int {
-        get {
-            let numberString = valueField.text! as NSString
-            return numberString.integerValue
-        }
-        set {
-            var tempValue = newValue
-            if newValue < minValue {
-                tempValue = minValue
+            if disableWhenMin {
+                decrementBtn.isEnabled = value > minValue
+            } else {
+                decrementBtn.isEnabled = true
             }
-            if newValue > maxValue {
-                tempValue = maxValue
+            if disableWhenMax {
+                incrementBtn.isEnabled = value < maxValue
+            } else {
+                incrementBtn.isEnabled = true
             }
-            valueField.text = "\(tempValue)"
-            decrementBtn.isEnabled = tempValue > minValue
-            incrementBtn.isEnabled = tempValue < maxValue
+            valueLabel.text = "\(value)"
         }
     }
     
-    // MARK: - life circle
+    @IBInspectable var value: Int = 1 {
+        didSet {
+            if value < minValue {
+                minValue = value
+            }
+            if value > maxValue {
+                maxValue = value
+            }
+            if disableWhenMin {
+                decrementBtn.isEnabled = value > minValue
+            } else {
+                decrementBtn.isEnabled = true
+            }
+            if disableWhenMax {
+                incrementBtn.isEnabled = value < maxValue
+            } else {
+                incrementBtn.isEnabled = true
+            }
+            valueLabel.text = "\(value)"
+        }
+    }
     
-    private var decrementBtn: UIButton!
-    private var incrementBtn: UIButton!
-    private var valueField: UITextField!
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
-    private func commonInit() {
-        decrementBtn = UIButton(type: .custom)
-        decrementBtn.addTarget(self, action: #selector(decrementAction), for: .touchUpInside)
-        addSubview(decrementBtn)
-        incrementBtn = UIButton(type: .custom)
-        incrementBtn.addTarget(self, action: #selector(incrementAction), for: .touchUpInside)
-        addSubview(incrementBtn)
-        valueField = UITextField()
-        valueField.delegate = self
-        valueField.textAlignment = .center
-        valueField.keyboardType = .numberPad
-        addSubview(valueField)
-        value = minValue 
-    }
-    public override func layoutSubviews() {
+    // MARK: - 私有属性
+    
+    private lazy var decrementBtn: UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.setImage(decrementNormalImage, for: .normal)
+        btn.setImage(decrementDisableImage, for: .disabled)
+        btn.addTarget(self, action: #selector(decrementAction), for: .touchUpInside)
+        addSubview(btn)
+        return btn
+    }()
+    
+    private lazy var incrementBtn: UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.setImage(incrementNormalImage, for: .normal)
+        btn.setImage(incrementDisableImage, for: .disabled)
+        btn.addTarget(self, action: #selector(incrementAction), for: .touchUpInside)
+        addSubview(btn)
+        return btn
+    }()
+    
+    private lazy var valueLabel: UILabel = {
+        let label = UILabel()
+        label.text = "\(value)"
+        label.textAlignment = .center
+        addSubview(label)
+        return label
+    }()
+    
+}
+
+public extension Stepper {
+    
+    override func layoutSubviews() {
         super.layoutSubviews()
         decrementBtn.frame = CGRect(x: 0, y: 0, width: crementSize.width, height: crementSize.height)
         decrementBtn.center = CGPoint(x: itemSpacing + crementSize.width / 2, y: bounds.size.height / 2)
         incrementBtn.frame = CGRect(x: 0, y: 0, width: crementSize.width, height: crementSize.height)
         incrementBtn.center = CGPoint(x: bounds.size.width - itemSpacing - crementSize.width / 2, y: bounds.size.height / 2)
-        valueField.frame = CGRect(
+        valueLabel.frame = CGRect(
             x: itemSpacing + crementSize.width + itemSpacing,
             y: 0,
             width: bounds.size.width - (itemSpacing + crementSize.width + itemSpacing) * 2,
@@ -152,33 +179,22 @@ public class Stepper: UIView, UITextFieldDelegate {
         )
     }
     
-    // MARK: - 值变化处理
-    
     @objc private func decrementAction() {
-        value -= 1
-        valueDidChangeHandler?(value)
+        if value > minValue {
+            value -= 1
+            onValueDidChangeHandler?(value)
+        } else { // 说明 disableWhenMin == false 且 value == minValue
+            onClickDecrementWhenMin?(value)
+        }
     }
     
     @objc private func incrementAction() {
-        value += 1
-        valueDidChangeHandler?(value)
-    }
-    
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let willString = (textField.text! as NSString).replacingCharacters(in: range, with: string) as NSString
-        // 是否是数字
-        let rules = "^[0-9]+$"
-        let predicate = NSPredicate(format: "SELF matches %@", rules)
-        guard predicate.evaluate(with: willString) else { return false }
-        // 是否在 [minValue, maxValue] 范围
-        let number = willString.integerValue
-        guard minValue <= number, number <= maxValue else { return false}
-        // "输入"合法，允许本次输入并回调值变化
-        // 通过修改 value 值来修改 textField 值，因为其中控制了加减按钮的可用属性
-        // 所以返回 true/false 不影响
-        value = number
-        valueDidChangeHandler?(number)
-        return false
+        if value < maxValue {
+            value += 1
+            onValueDidChangeHandler?(value)
+        } else { // 说明 disableWhenMax == false 且 value == maxValue
+            onClickIncrementWhenMax?(value)
+        }
     }
     
 }

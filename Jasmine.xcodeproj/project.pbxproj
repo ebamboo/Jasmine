@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD27A13D2876B20900CA646A /* GradeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD27A13B2876B20900CA646A /* GradeTestViewController.swift */; };
+		AD27A13E2876B20900CA646A /* GradeTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD27A13C2876B20900CA646A /* GradeTestViewController.xib */; };
 		AD351797275721E800D1721B /* Jasmine.podspec in Resources */ = {isa = PBXBuildFile; fileRef = AD351796275721E800D1721B /* Jasmine.podspec */; };
 		AD63D1BE2760CA7600F19301 /* DashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1BD2760CA7600F19301 /* DashView.swift */; };
 		AD63D1C22760CEBB00F19301 /* DashTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C02760CEBB00F19301 /* DashTestViewController.swift */; };
@@ -42,7 +44,7 @@
 		ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF36D9C2750FCA3008BA1DB /* Assets.xcassets */; };
 		ADF36DA02750FCA3008BA1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF36D9E2750FCA3008BA1DB /* LaunchScreen.storyboard */; };
 		ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */; };
-		ADF36DBA2750FE1A008BA1DB /* StarPraiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */; };
+		ADF36DBA2750FE1A008BA1DB /* StarGradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DAA2750FE1A008BA1DB /* StarGradeView.swift */; };
 		ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */; };
 		ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */; };
 		ADF36DBD2750FE1A008BA1DB /* FileManager+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD27A13B2876B20900CA646A /* GradeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTestViewController.swift; sourceTree = "<group>"; };
+		AD27A13C2876B20900CA646A /* GradeTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeTestViewController.xib; sourceTree = "<group>"; };
 		AD351796275721E800D1721B /* Jasmine.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jasmine.podspec; sourceTree = SOURCE_ROOT; };
 		AD63D1BD2760CA7600F19301 /* DashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashView.swift; sourceTree = "<group>"; };
 		AD63D1C02760CEBB00F19301 /* DashTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashTestViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +107,7 @@
 		ADF36D9F2750FCA3008BA1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADF36DA12750FCA3008BA1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationButton.swift; sourceTree = "<group>"; };
-		ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarPraiseView.swift; sourceTree = "<group>"; };
+		ADF36DAA2750FE1A008BA1DB /* StarGradeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarGradeView.swift; sourceTree = "<group>"; };
 		ADF36DAB2750FE1A008BA1DB /* UIImage+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DAC2750FE1A008BA1DB /* String+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
 		ADF36DAD2750FE1A008BA1DB /* FileManager+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Tools.swift"; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD27A13A2876B1E300CA646A /* 自定义评分控件 */ = {
+			isa = PBXGroup;
+			children = (
+				AD27A13B2876B20900CA646A /* GradeTestViewController.swift */,
+				AD27A13C2876B20900CA646A /* GradeTestViewController.xib */,
+			);
+			path = "自定义评分控件";
+			sourceTree = "<group>";
+		};
 		AD63D1BF2760CE9B00F19301 /* 自定义虚线视图DashView */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +250,7 @@
 		ADF36E1427523FB2008BA1DB /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				AD27A13A2876B1E300CA646A /* 自定义评分控件 */,
 				AD8E0D362873EF030016DD2F /* UIImage+Transform 测试 */,
 				AD8E0D312873EEB40016DD2F /* 自定义 Stepper */,
 				ADB71302276C7589008AE7DE /* 自定义UICollectionViewFlowLayout  */,
@@ -301,7 +315,7 @@
 		ADF9BC022861980400A5E16E /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				ADF36DAA2750FE1A008BA1DB /* StarPraiseView.swift */,
+				ADF36DAA2750FE1A008BA1DB /* StarGradeView.swift */,
 				ADA452E1275B9E6200C15377 /* Stepper.swift */,
 				ADF36E192752406F008BA1DB /* Keychain.swift */,
 				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
@@ -385,6 +399,7 @@
 				ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */,
 				ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */,
 				ADF36D9B2750FCA1008BA1DB /* Main.storyboard in Resources */,
+				AD27A13E2876B20900CA646A /* GradeTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +412,7 @@
 			files = (
 				ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */,
 				AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */,
-				ADF36DBA2750FE1A008BA1DB /* StarPraiseView.swift in Sources */,
+				ADF36DBA2750FE1A008BA1DB /* StarGradeView.swift in Sources */,
 				ADF36DBD2750FE1A008BA1DB /* FileManager+Tools.swift in Sources */,
 				ADF36DC42750FE1A008BA1DB /* UIView+Tools.swift in Sources */,
 				ADF36DC52750FE1A008BA1DB /* NSObject+Tools.swift in Sources */,
@@ -423,6 +438,7 @@
 				ADB71301276C73CC008AE7DE /* CollectionViewFlowLayout.swift in Sources */,
 				ADB527DB286E8BDA009ADAD5 /* String+Sub.swift in Sources */,
 				ADB71305276C75C5008AE7DE /* FlowLayoutTestViewController.swift in Sources */,
+				AD27A13D2876B20900CA646A /* GradeTestViewController.swift in Sources */,
 				ADF36DC22750FE1A008BA1DB /* UIViewController+Tools.swift in Sources */,
 				ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */,
 				ADF36E1727523FE2008BA1DB /* KeychainViewController.swift in Sources */,

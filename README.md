@@ -1,2 +1,2 @@
-# Jasmine
-Swift 开发工具包
+Cocoapods
+pod 'Jasmine'

@@ -54,21 +54,15 @@ public extension UIImage {
             let rotatedSize = tempView.frame.size
             // 根据 rotatedSize 创建位图上下文
             UIGraphicsBeginImageContextWithOptions(rotatedSize, false, scale)
-            guard let context = UIGraphicsGetCurrentContext() else {
-                UIGraphicsEndImageContext()
-                return nil
-            }
+            defer { UIGraphicsEndImageContext() }
+            guard let context = UIGraphicsGetCurrentContext() else { return nil }
             // 坐标系先平移操作，再旋转操作
             context.translateBy(x: rotatedSize.width / 2, y: rotatedSize.height / 2)
             context.rotate(by: radian)
             // 绘制位图
             draw(in: CGRect(x: -size.width / 2, y: -size.height / 2, width: size.width, height: size.height))
             // 获取图片
-            guard let tempImage = UIGraphicsGetImageFromCurrentImageContext() else {
-                UIGraphicsEndImageContext()
-                return nil
-            }
-            UIGraphicsEndImageContext()
+            guard let tempImage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
             return tempImage;
         }
     }

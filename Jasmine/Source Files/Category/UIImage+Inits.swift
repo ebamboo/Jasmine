@@ -33,33 +33,21 @@ public extension UIImage {
     /// 颜色转为 UIImage
     convenience init?(color: UIColor, size: CGSize = CGSize(width: 1.0, height: 1.0)) {
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            UIGraphicsEndImageContext()
-            return nil
-        }
+        defer { UIGraphicsEndImageContext() }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
         context.setFillColor(color.cgColor)
         context.fill(CGRect(origin: .zero, size: size))
-        guard let cgImage  = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
-            UIGraphicsEndImageContext()
-            return nil
-        }
-        UIGraphicsEndImageContext()
+        guard let cgImage  = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else { return nil }
         self.init(cgImage: cgImage)
     }
     
     /// UIView 转为 UIImage
     convenience init?(view: UIView) {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            UIGraphicsEndImageContext()
-            return nil
-        }
+        defer { UIGraphicsEndImageContext() }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
         view.layer.render(in: context)
-        guard let cgImage  = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
-            UIGraphicsEndImageContext()
-            return nil
-        }
-        UIGraphicsEndImageContext()
+        guard let cgImage  = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else { return nil }
         self.init(cgImage: cgImage)
     }
     

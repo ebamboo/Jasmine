@@ -31,7 +31,6 @@ public extension NSObject {
     }
     
     private static var work_times_key = "work_times_key"
-    
     private var workTimes: Int? {
         get {
             objc_getAssociatedObject(self, &Self.work_times_key) as? Int

@@ -8,22 +8,6 @@
 import UIKit
 import WebKit
 
-public class ScriptMessageHandlerAddition {
-    
-    weak private (set) var userContentController: WKUserContentController?
-    let name: String
-    
-    init(userContentController: WKUserContentController, name: String) {
-        self.userContentController = userContentController
-        self.name = name
-    }
-    
-    deinit {
-        userContentController?.removeScriptMessageHandler(forName: name)
-    }
-    
-}
-
 public extension WKUserContentController {
     
     /// 添加响应 ScriptMessage(name) 的 handler
@@ -48,6 +32,40 @@ private extension WKUserContentController {
             handler(userContentController, message)
         }
         
+    }
+    
+}
+
+public class ScriptMessageHandlerAddition {
+    
+    weak private (set) var userContentController: WKUserContentController?
+    let name: String
+    
+    init(userContentController: WKUserContentController, name: String) {
+        self.userContentController = userContentController
+        self.name = name
+    }
+    
+    func managed(by owner: NSObject) {
+        owner.scriptMessageHandlerAdditions.append(self)
+    }
+    
+    deinit {
+        userContentController?.removeScriptMessageHandler(forName: name)
+    }
+    
+}
+
+private extension NSObject {
+    
+    static var script_message_handler_additions_key = "script_message_handler_additions_key"
+    var scriptMessageHandlerAdditions: [ScriptMessageHandlerAddition] {
+        get {
+            objc_getAssociatedObject(self, &Self.script_message_handler_additions_key) as? [ScriptMessageHandlerAddition] ?? []
+        }
+        set {
+            objc_setAssociatedObject(self, &Self.script_message_handler_additions_key, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
     
 }

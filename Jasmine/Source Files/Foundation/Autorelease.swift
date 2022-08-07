@@ -94,27 +94,3 @@ private extension NSObject {
     }
     
 }
-
-// MARK: - WKUserContentController
-
-public extension ScriptMessageHandlerAddition {
-    
-    func managed(by owner: NSObject) {
-        owner.scriptMessageHandlerAdditions.append(self)
-    }
-    
-}
-
-private extension NSObject {
-    
-    static var script_message_handler_additions_key = "script_message_handler_additions_key"
-    var scriptMessageHandlerAdditions: [ScriptMessageHandlerAddition] {
-        get {
-            objc_getAssociatedObject(self, &Self.script_message_handler_additions_key) as? [ScriptMessageHandlerAddition] ?? []
-        }
-        set {
-            objc_setAssociatedObject(self, &Self.script_message_handler_additions_key, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    
-}

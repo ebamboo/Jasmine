@@ -16,6 +16,7 @@
 		AD63D1C52763751E00F19301 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C42763751E00F19301 /* RoundView.swift */; };
 		AD63D1C927637A3F00F19301 /* RoundViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */; };
 		AD63D1CA27637A3F00F19301 /* RoundViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */; };
+		AD897CA6289F7DBF00EAB0BA /* JustWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897CA5289F7DBF00EAB0BA /* JustWork.swift */; };
 		AD8E0D22287173830016DD2F /* UIImage+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D21287173830016DD2F /* UIImage+Transform.swift */; };
 		AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */; };
 		AD8E0D342873EEFF0016DD2F /* StepperTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D322873EEFF0016DD2F /* StepperTestViewController.swift */; };
@@ -77,6 +78,7 @@
 		AD63D1C42763751E00F19301 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		AD63D1C727637A3F00F19301 /* RoundViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewTestViewController.swift; sourceTree = "<group>"; };
 		AD63D1C827637A3F00F19301 /* RoundViewTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundViewTestViewController.xib; sourceTree = "<group>"; };
+		AD897CA5289F7DBF00EAB0BA /* JustWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustWork.swift; sourceTree = "<group>"; };
 		AD8E0D21287173830016DD2F /* UIImage+Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Transform.swift"; sourceTree = "<group>"; };
 		AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Inits.swift"; sourceTree = "<group>"; };
 		AD8E0D322873EEFF0016DD2F /* StepperTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTestViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				AD63D1BD2760CA7600F19301 /* DashView.swift */,
 				AD63D1C42763751E00F19301 /* RoundView.swift */,
 				ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */,
+				AD897CA5289F7DBF00EAB0BA /* JustWork.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				AD63D1C927637A3F00F19301 /* RoundViewTestViewController.swift in Sources */,
 				ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */,
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,
+				AD897CA6289F7DBF00EAB0BA /* JustWork.swift in Sources */,
 				ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */,
 				ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */,
 				AD8E0D22287173830016DD2F /* UIImage+Transform.swift in Sources */,

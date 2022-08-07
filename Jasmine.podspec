@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Jasmine"
-  spec.version      = "3.4.1"
+  spec.version      = "3.5.0"
   spec.license      = "MIT"
   spec.summary      = "Swift 开发工具包"
   spec.author       = { "ebamboo" => "1453810050@qq.com" }
@@ -19,5 +19,6 @@ Pod::Spec.new do |spec|
   
   spec.swift_versions = ["5.3", "5.4", "5.5"]
   spec.platform     = :ios, "11.0"
+  spec.framework    = "WebKit"
   
 end

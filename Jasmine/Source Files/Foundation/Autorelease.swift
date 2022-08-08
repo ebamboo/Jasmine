@@ -7,7 +7,8 @@
 
 import Foundation
 
-// MARK: - Timer
+// MARK: - ================ Timer ==================
+// MARK: -
 
 public extension Timer {
     
@@ -37,7 +38,8 @@ private extension NSObject {
     
 }
 
-// MARK: - NotificationCenter
+// MARK: - ============ NotificationCenter =============
+// MARK: -
 
 public extension NSObjectProtocol {
     
@@ -71,7 +73,8 @@ private extension NSObject {
     
 }
 
-// MARK: - KVO
+// MARK: - ================= KVO ===================
+// MARK: -
 
 public extension NSKeyValueObservation {
     

@@ -8,35 +8,75 @@
 import UIKit
 
 ///
-/// 该控件是商城商品数量编辑控件
+/// 数量编辑控件
 ///
 /// 注意：
-/// 1. 设置 value、minValue、maxValue 时，内部已保证 minValue 小于等于 value 小于等于 maxValue。
+/// 设置 value、minValue、maxValue 时，内部已保证 minValue 小于等于 value，value  小于等于 maxValue。
 /// 具体规则和实现请查看相关属性 didset 方法
-/// 2. 布局属性必须在控制属性之前设置才会生效
-/// 使用 xib 或者 storyboard 时，通过 the identity inspector -> User Defined Runtime Attributes 查看和调整顺序
 ///
-public class Stepper: UIView, UITextFieldDelegate {
+public class Stepper: UIView {
     
     // MARK: - 布局属性
     
     /// decrementBtn--valueLabel--incrementBtn 之间间距
-    @IBInspectable var itemSpacing: CGFloat = 8
+    @IBInspectable var itemSpacing: CGFloat = 8 {
+        didSet {
+            setNeedsLayout()
+            layoutIfNeeded()
+        }
+    }
+    
     /// decrementBtn 和 incrementBtn 的尺寸
-    @IBInspectable var crementSize: CGSize = CGSize(width: 22, height: 22)
+    @IBInspectable var crementSize: CGSize = CGSize(width: 22, height: 22) {
+        didSet {
+            setNeedsLayout()
+            layoutIfNeeded()
+        }
+    }
+    
     /// decrementBtn 可用状态图片
-    @IBInspectable var decrementNormalImage: UIImage?
+    @IBInspectable var decrementNormalImage: UIImage? = nil {
+        didSet {
+            decrementBtn.setImage(decrementNormalImage, for: .normal)
+        }
+    }
+    
     /// decrementBtn 禁用状态图片
-    @IBInspectable var decrementDisableImage: UIImage?
+    @IBInspectable var decrementDisableImage: UIImage? = nil {
+        didSet {
+            decrementBtn.setImage(decrementDisableImage, for: .disabled)
+        }
+    }
+    
     /// incrementBtn 可用状态图片
-    @IBInspectable var incrementNormalImage: UIImage?
+    @IBInspectable var incrementNormalImage: UIImage? = nil {
+        didSet {
+            incrementBtn.setImage(incrementNormalImage, for: .normal)
+        }
+    }
+    
     /// incrementBtn 禁用状态图片
-    @IBInspectable var incrementDisableImage: UIImage?
+    @IBInspectable var incrementDisableImage: UIImage? = nil {
+        didSet {
+            incrementBtn.setImage(incrementDisableImage, for: .disabled)
+        }
+    }
+    
+    // MARK: - 控制属性
     
     /// value == minValue 时，是否禁用 decrementBtn
-    @IBInspectable var disableWhenMin: Bool = true
+    @IBInspectable var disableWhenMin: Bool = true {
+        didSet {
+            value += 0
+        }
+    }
+    
     /// value == maxValue 时，是否禁用 incrementBtn
-    @IBInspectable var disableWhenMax: Bool = true
+    @IBInspectable var disableWhenMax: Bool = true {
+        didSet {
+            value += 0
+        }
+    }
     
     // MARK: - 响应事件
     
@@ -65,9 +105,9 @@ public class Stepper: UIView, UITextFieldDelegate {
         onValueDidChangeHandler = handler
     }
 
-    // MARK: - 控制属性
+    // MARK: - 核心功能
     
-    @IBInspectable var minValue: Int = 1 {
+    @IBInspectable var minValue: Int = 0 {
         didSet {
             if minValue > maxValue {
                 maxValue = minValue

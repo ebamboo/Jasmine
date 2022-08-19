@@ -32,9 +32,6 @@
                         <userDefinedRuntimeAttribute type="image" keyPath="decrementDisableImage" value="decrement-disable"/>
                         <userDefinedRuntimeAttribute type="image" keyPath="incrementNormalImage" value="increment-normal"/>
                         <userDefinedRuntimeAttribute type="image" keyPath="incrementDisableImage" value="increment-disable"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                            <integer key="value" value="9"/>
-                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>

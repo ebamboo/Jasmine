@@ -75,7 +75,7 @@ public extension CollectionViewTagLayout {
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             let lastAttributes = _layoutAttributesForItems[i-1]
             let itemWidth = _itemWidthReader(collectionView!, indexPath)
-            if lastAttributes.frame.origin.x + lastAttributes.frame.size.width + _interitemSpacing + itemWidth <= collectionView!.size.width { // 本行尾部追加
+            if lastAttributes.frame.origin.x + lastAttributes.frame.size.width + _interitemSpacing + itemWidth <= collectionView!.bounds.size.width { // 本行尾部追加
                 attributes.frame = CGRect(
                     x: lastAttributes.frame.origin.x + lastAttributes.frame.size.width + _interitemSpacing,
                     y: lastAttributes.frame.origin.y,
@@ -98,7 +98,7 @@ public extension CollectionViewTagLayout {
     }
     
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: collectionView!.size.width, height: _contentHeight)
+        return CGSize(width: collectionView!.bounds.size.width, height: _contentHeight)
     }
     
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {

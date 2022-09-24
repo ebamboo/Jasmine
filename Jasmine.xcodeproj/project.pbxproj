@@ -26,6 +26,9 @@
 		AD8E0D352873EEFF0016DD2F /* StepperTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8E0D332873EEFF0016DD2F /* StepperTestViewController.xib */; };
 		AD8E0D392873EF480016DD2F /* UIImageTransformTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D372873EF480016DD2F /* UIImageTransformTestViewController.swift */; };
 		AD8E0D3A2873EF480016DD2F /* UIImageTransformTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8E0D382873EF480016DD2F /* UIImageTransformTestViewController.xib */; };
+		AD8EF01128DE9DC80069E714 /* CollectionViewTagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8EF01028DE9DC80069E714 /* CollectionViewTagLayout.swift */; };
+		AD8EF01528DEB5B70069E714 /* TagLayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8EF01328DEB5B70069E714 /* TagLayoutTestViewController.swift */; };
+		AD8EF01628DEB5B70069E714 /* TagLayoutTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8EF01428DEB5B70069E714 /* TagLayoutTestViewController.xib */; };
 		ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA452E1275B9E6200C15377 /* Stepper.swift */; };
 		ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527D8286E8B03009ADAD5 /* String+Verify.swift */; };
 		ADB527DB286E8BDA009ADAD5 /* String+Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */; };
@@ -91,6 +94,9 @@
 		AD8E0D332873EEFF0016DD2F /* StepperTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepperTestViewController.xib; sourceTree = "<group>"; };
 		AD8E0D372873EF480016DD2F /* UIImageTransformTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformTestViewController.swift; sourceTree = "<group>"; };
 		AD8E0D382873EF480016DD2F /* UIImageTransformTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIImageTransformTestViewController.xib; sourceTree = "<group>"; };
+		AD8EF01028DE9DC80069E714 /* CollectionViewTagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTagLayout.swift; sourceTree = "<group>"; };
+		AD8EF01328DEB5B70069E714 /* TagLayoutTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayoutTestViewController.swift; sourceTree = "<group>"; };
+		AD8EF01428DEB5B70069E714 /* TagLayoutTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagLayoutTestViewController.xib; sourceTree = "<group>"; };
 		ADA452E1275B9E6200C15377 /* Stepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		ADB527D8286E8B03009ADAD5 /* String+Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Verify.swift"; sourceTree = "<group>"; };
 		ADB527DA286E8BDA009ADAD5 /* String+Sub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sub.swift"; sourceTree = "<group>"; };
@@ -194,6 +200,15 @@
 			path = "UIImage+Transform 测试";
 			sourceTree = "<group>";
 		};
+		AD8EF01228DEB56F0069E714 /* 标签样式CollectionViewTagLayout */ = {
+			isa = PBXGroup;
+			children = (
+				AD8EF01328DEB5B70069E714 /* TagLayoutTestViewController.swift */,
+				AD8EF01428DEB5B70069E714 /* TagLayoutTestViewController.xib */,
+			);
+			path = "标签样式CollectionViewTagLayout";
+			sourceTree = "<group>";
+		};
 		ADB71302276C7589008AE7DE /* 自定义UICollectionViewFlowLayout  */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +273,7 @@
 		ADF36E1427523FB2008BA1DB /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				AD8EF01228DEB56F0069E714 /* 标签样式CollectionViewTagLayout */,
 				AD27A13A2876B1E300CA646A /* 自定义评分控件 */,
 				AD8E0D362873EF030016DD2F /* UIImage+Transform 测试 */,
 				AD8E0D312873EEB40016DD2F /* 自定义 Stepper */,
@@ -332,6 +348,7 @@
 				AD63D1BD2760CA7600F19301 /* DashView.swift */,
 				AD63D1C42763751E00F19301 /* RoundView.swift */,
 				ADB71300276C73CC008AE7DE /* CollectionViewFlowLayout.swift */,
+				AD8EF01028DE9DC80069E714 /* CollectionViewTagLayout.swift */,
 				AD897CA5289F7DBF00EAB0BA /* JustWork.swift */,
 				AD897CA9289F87BE00EAB0BA /* WeakObjects.swift */,
 				AD897CAB289F8A1E00EAB0BA /* Autorelease.swift */,
@@ -406,6 +423,7 @@
 				AD63D1C32760CEBB00F19301 /* DashTestViewController.xib in Resources */,
 				ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */,
 				ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */,
+				AD8EF01628DEB5B70069E714 /* TagLayoutTestViewController.xib in Resources */,
 				AD8E0D3A2873EF480016DD2F /* UIImageTransformTestViewController.xib in Resources */,
 				ADB71306276C75C5008AE7DE /* FlowLayoutTestViewController.xib in Resources */,
 				ADF36E1827523FE2008BA1DB /* KeychainViewController.xib in Resources */,
@@ -447,6 +465,7 @@
 				ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */,
 				AD8E0D392873EF480016DD2F /* UIImageTransformTestViewController.swift in Sources */,
 				ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */,
+				AD8EF01128DE9DC80069E714 /* CollectionViewTagLayout.swift in Sources */,
 				AD63D1C52763751E00F19301 /* RoundView.swift in Sources */,
 				ADCC89A12754946300912771 /* UITableView+Tools.swift in Sources */,
 				ADB71301276C73CC008AE7DE /* CollectionViewFlowLayout.swift in Sources */,
@@ -461,6 +480,7 @@
 				AD8E0D342873EEFF0016DD2F /* StepperTestViewController.swift in Sources */,
 				ADF36DBB2750FE1A008BA1DB /* UIImage+Tools.swift in Sources */,
 				AD63D1C22760CEBB00F19301 /* DashTestViewController.swift in Sources */,
+				AD8EF01528DEB5B70069E714 /* TagLayoutTestViewController.swift in Sources */,
 				ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */,
 				ADCDE4CC283F847600B188B2 /* UICollectionView+Tools.swift in Sources */,
 				ADF36DC02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift in Sources */,

@@ -16,12 +16,12 @@ public extension UIImage {
     }
     
     /// 字符串转为二维码图片
-    convenience init?(qr: String, side: CGFloat = 300) {
+    convenience init?(string: String, side: CGFloat = 300) {
         // 二维码滤镜名称固定写法 "CIQRCodeGenerator"
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
         filter.setDefaults()
         // 设置输入数据
-        filter.setValue(qr.data(using: .utf8), forKey: "inputMessage")
+        filter.setValue(string.data(using: .utf8), forKey: "inputMessage")
         // 设置二维码的纠错水平，越高纠错水平越高，可以污损的范围越大
         filter.setValue("H", forKey: "inputCorrectionLevel")
         
@@ -43,7 +43,7 @@ public extension UIImage {
     
     /// UIView 转为 UIImage
     convenience init?(view: UIView) {
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
         defer { UIGraphicsEndImageContext() }
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
         view.layer.render(in: context)

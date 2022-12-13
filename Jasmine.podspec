@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Jasmine"
-  spec.version      = "3.6.1"
+  spec.version      = "3.6.2"
   spec.license      = "MIT"
   spec.summary      = "Swift 开发工具包"
   spec.author       = { "ebamboo" => "1453810050@qq.com" }

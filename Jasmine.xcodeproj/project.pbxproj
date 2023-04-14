@@ -42,6 +42,8 @@
 		ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC89A7275498C200912771 /* CacheTableViewCell.swift */; };
 		ADCC89AA275498C200912771 /* CacheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC89A8275498C200912771 /* CacheTableViewCell.xib */; };
 		ADCDE4CC283F847600B188B2 /* UICollectionView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCDE4CB283F847600B188B2 /* UICollectionView+Tools.swift */; };
+		ADED6FCB29E92A6C00308406 /* SpaceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADED6FCA29E92A6C00308406 /* SpaceLabel.swift */; };
+		ADED6FCD29E92B8E00308406 /* URL+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADED6FCC29E92B8E00308406 /* URL+Tools.swift */; };
 		ADEFCFD72806BB59002139DC /* UIBarButtonItem+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */; };
 		ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */; };
 		ADEFCFD92806BB59002139DC /* UIControll+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */; };
@@ -110,6 +112,8 @@
 		ADCC89A7275498C200912771 /* CacheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTableViewCell.swift; sourceTree = "<group>"; };
 		ADCC89A8275498C200912771 /* CacheTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheTableViewCell.xib; sourceTree = "<group>"; };
 		ADCDE4CB283F847600B188B2 /* UICollectionView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Tools.swift"; sourceTree = "<group>"; };
+		ADED6FCA29E92A6C00308406 /* SpaceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceLabel.swift; sourceTree = "<group>"; };
+		ADED6FCC29E92B8E00308406 /* URL+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Tools.swift"; sourceTree = "<group>"; };
 		ADEFCFD42806BB59002139DC /* UIBarButtonItem+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Handler.swift"; sourceTree = "<group>"; };
 		ADEFCFD52806BB59002139DC /* UIGestureRecognizer+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Handler.swift"; sourceTree = "<group>"; };
 		ADEFCFD62806BB59002139DC /* UIControll+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControll+Handler.swift"; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				ADF36DAE2750FE1A008BA1DB /* Date+Tools.swift */,
 				ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */,
 				ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */,
+				ADED6FCC29E92B8E00308406 /* URL+Tools.swift */,
 				ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */,
 				ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */,
 				ADCC89A02754946300912771 /* UITableView+Tools.swift */,
@@ -344,6 +349,7 @@
 				ADA452E1275B9E6200C15377 /* Stepper.swift */,
 				ADF36E192752406F008BA1DB /* Keychain.swift */,
 				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
+				ADED6FCA29E92A6C00308406 /* SpaceLabel.swift */,
 				ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */,
 				AD63D1BD2760CA7600F19301 /* DashView.swift */,
 				AD63D1C42763751E00F19301 /* RoundView.swift */,
@@ -440,11 +446,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADED6FCD29E92B8E00308406 /* URL+Tools.swift in Sources */,
 				ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */,
 				AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */,
 				ADF36DBA2750FE1A008BA1DB /* StarGradeView.swift in Sources */,
 				ADF36DBD2750FE1A008BA1DB /* FileManager+Tools.swift in Sources */,
 				AD897CA8289F816800EAB0BA /* WKUserContentController+Handler.swift in Sources */,
+				ADED6FCB29E92A6C00308406 /* SpaceLabel.swift in Sources */,
 				ADF36DC42750FE1A008BA1DB /* UIView+Tools.swift in Sources */,
 				ADF36DC52750FE1A008BA1DB /* NSObject+Tools.swift in Sources */,
 				AD63D1BE2760CA7600F19301 /* DashView.swift in Sources */,

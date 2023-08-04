@@ -10,6 +10,9 @@
 		AD27A13D2876B20900CA646A /* GradeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD27A13B2876B20900CA646A /* GradeTestViewController.swift */; };
 		AD27A13E2876B20900CA646A /* GradeTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD27A13C2876B20900CA646A /* GradeTestViewController.xib */; };
 		AD351797275721E800D1721B /* Jasmine.podspec in Resources */ = {isa = PBXBuildFile; fileRef = AD351796275721E800D1721B /* Jasmine.podspec */; };
+		AD5E85EE2A7C888100343D7B /* NestedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E85ED2A7C888100343D7B /* NestedScrollView.swift */; };
+		AD5E85F22A7C892700343D7B /* NestedScrollViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E85F02A7C892700343D7B /* NestedScrollViewTestViewController.swift */; };
+		AD5E85F32A7C892700343D7B /* NestedScrollViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5E85F12A7C892700343D7B /* NestedScrollViewTestViewController.xib */; };
 		AD63D1BE2760CA7600F19301 /* DashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1BD2760CA7600F19301 /* DashView.swift */; };
 		AD63D1C22760CEBB00F19301 /* DashTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63D1C02760CEBB00F19301 /* DashTestViewController.swift */; };
 		AD63D1C32760CEBB00F19301 /* DashTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD63D1C12760CEBB00F19301 /* DashTestViewController.xib */; };
@@ -80,6 +83,9 @@
 		AD27A13B2876B20900CA646A /* GradeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTestViewController.swift; sourceTree = "<group>"; };
 		AD27A13C2876B20900CA646A /* GradeTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeTestViewController.xib; sourceTree = "<group>"; };
 		AD351796275721E800D1721B /* Jasmine.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jasmine.podspec; sourceTree = SOURCE_ROOT; };
+		AD5E85ED2A7C888100343D7B /* NestedScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedScrollView.swift; sourceTree = "<group>"; };
+		AD5E85F02A7C892700343D7B /* NestedScrollViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedScrollViewTestViewController.swift; sourceTree = "<group>"; };
+		AD5E85F12A7C892700343D7B /* NestedScrollViewTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NestedScrollViewTestViewController.xib; sourceTree = "<group>"; };
 		AD63D1BD2760CA7600F19301 /* DashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashView.swift; sourceTree = "<group>"; };
 		AD63D1C02760CEBB00F19301 /* DashTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashTestViewController.swift; sourceTree = "<group>"; };
 		AD63D1C12760CEBB00F19301 /* DashTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashTestViewController.xib; sourceTree = "<group>"; };
@@ -166,6 +172,15 @@
 				AD27A13C2876B20900CA646A /* GradeTestViewController.xib */,
 			);
 			path = "自定义评分控件";
+			sourceTree = "<group>";
+		};
+		AD5E85EF2A7C88EC00343D7B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				AD5E85F02A7C892700343D7B /* NestedScrollViewTestViewController.swift */,
+				AD5E85F12A7C892700343D7B /* NestedScrollViewTestViewController.xib */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		AD63D1BF2760CE9B00F19301 /* 自定义虚线视图DashView */ = {
@@ -277,6 +292,7 @@
 		ADF36E1427523FB2008BA1DB /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				AD5E85EF2A7C88EC00343D7B /* New Group */,
 				AD8EF01228DEB56F0069E714 /* 标签样式CollectionViewTagLayout */,
 				AD27A13A2876B1E300CA646A /* 自定义评分控件 */,
 				AD8E0D362873EF030016DD2F /* UIImage+Transform 测试 */,
@@ -358,6 +374,7 @@
 				AD897CA5289F7DBF00EAB0BA /* JustWork.swift */,
 				AD897CA9289F87BE00EAB0BA /* WeakObjects.swift */,
 				AD897CAB289F8A1E00EAB0BA /* Autorelease.swift */,
+				AD5E85ED2A7C888100343D7B /* NestedScrollView.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -426,6 +443,7 @@
 				AD8E0D352873EEFF0016DD2F /* StepperTestViewController.xib in Resources */,
 				AD63D1CA27637A3F00F19301 /* RoundViewTestViewController.xib in Resources */,
 				AD351797275721E800D1721B /* Jasmine.podspec in Resources */,
+				AD5E85F32A7C892700343D7B /* NestedScrollViewTestViewController.xib in Resources */,
 				AD63D1C32760CEBB00F19301 /* DashTestViewController.xib in Resources */,
 				ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */,
 				ADF36D9D2750FCA3008BA1DB /* Assets.xcassets in Resources */,
@@ -448,6 +466,7 @@
 			files = (
 				ADED6FCD29E92B8E00308406 /* URL+Tools.swift in Sources */,
 				ADEFCFD82806BB59002139DC /* UIGestureRecognizer+Handler.swift in Sources */,
+				AD5E85EE2A7C888100343D7B /* NestedScrollView.swift in Sources */,
 				AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */,
 				ADF36DBA2750FE1A008BA1DB /* StarGradeView.swift in Sources */,
 				ADF36DBD2750FE1A008BA1DB /* FileManager+Tools.swift in Sources */,
@@ -461,6 +480,7 @@
 				ADA452E2275B9E6200C15377 /* Stepper.swift in Sources */,
 				ADF36DC72750FE1A008BA1DB /* UITableViewCell+Tools.swift in Sources */,
 				AD63D1C927637A3F00F19301 /* RoundViewTestViewController.swift in Sources */,
+				AD5E85F22A7C892700343D7B /* NestedScrollViewTestViewController.swift in Sources */,
 				ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */,
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,
 				AD897CA6289F7DBF00EAB0BA /* JustWork.swift in Sources */,

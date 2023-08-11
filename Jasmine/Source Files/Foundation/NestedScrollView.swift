@@ -13,7 +13,7 @@ private let ___nested_main_scroll_view_tag___ = 3141592653
 ///
 /// ！！！注意 ！！！
 /// 1. 设置主 ScrollView Tag 为 ___nested_main_scroll_view_tag___ （为了美观设置showsVerticalScrollIndicator为false）
-/// 2. 设置子 ScrollView 类型为 NestedScrollView/NestTableView/NestCollectionView
+/// 2. 设置子 ScrollView 类型为 NestedScrollView/NestedTableView/NestedCollectionView
 /// 3. 在主 ScrollView 和 子 ScrollView 滚动回调中 scrollViewDidScroll(_:) 作处理（参考如下）
 ///
 
@@ -63,7 +63,7 @@ class NestedScrollView: UIScrollView, UIGestureRecognizerDelegate {
     
 }
 
-class NestTableView: UITableView, UIGestureRecognizerDelegate {
+class NestedTableView: UITableView, UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         gestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&
@@ -73,7 +73,7 @@ class NestTableView: UITableView, UIGestureRecognizerDelegate {
     
 }
 
-class NestCollectionView: UICollectionView, UIGestureRecognizerDelegate {
+class NestedCollectionView: UICollectionView, UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         gestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&

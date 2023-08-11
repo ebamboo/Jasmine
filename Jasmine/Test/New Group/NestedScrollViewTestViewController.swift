@@ -13,7 +13,7 @@ class NestedScrollViewTestViewController: UIViewController {
     
     @IBOutlet weak var subStackView: UIStackView!
     
-    @IBOutlet weak var subTableView: NestTableView!
+    @IBOutlet weak var subTableView: NestedTableView!
 
 }
 

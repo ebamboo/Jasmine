@@ -23,6 +23,7 @@
 		AD897CA8289F816800EAB0BA /* WKUserContentController+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897CA7289F816800EAB0BA /* WKUserContentController+Handler.swift */; };
 		AD897CAA289F87BE00EAB0BA /* WeakObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897CA9289F87BE00EAB0BA /* WeakObjects.swift */; };
 		AD897CAC289F8A1E00EAB0BA /* Autorelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897CAB289F8A1E00EAB0BA /* Autorelease.swift */; };
+		AD8CDF2C2A85DC280092C732 /* UIStackView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CDF2B2A85DC280092C732 /* UIStackView+Tools.swift */; };
 		AD8E0D22287173830016DD2F /* UIImage+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D21287173830016DD2F /* UIImage+Transform.swift */; };
 		AD8E0D24287173BA0016DD2F /* UIImage+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */; };
 		AD8E0D342873EEFF0016DD2F /* StepperTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E0D322873EEFF0016DD2F /* StepperTestViewController.swift */; };
@@ -96,6 +97,7 @@
 		AD897CA7289F816800EAB0BA /* WKUserContentController+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKUserContentController+Handler.swift"; sourceTree = "<group>"; };
 		AD897CA9289F87BE00EAB0BA /* WeakObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakObjects.swift; sourceTree = "<group>"; };
 		AD897CAB289F8A1E00EAB0BA /* Autorelease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autorelease.swift; sourceTree = "<group>"; };
+		AD8CDF2B2A85DC280092C732 /* UIStackView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Tools.swift"; sourceTree = "<group>"; };
 		AD8E0D21287173830016DD2F /* UIImage+Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Transform.swift"; sourceTree = "<group>"; };
 		AD8E0D23287173BA0016DD2F /* UIImage+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Inits.swift"; sourceTree = "<group>"; };
 		AD8E0D322873EEFF0016DD2F /* StepperTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTestViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				ADF36DB52750FE1A008BA1DB /* NSObject+Tools.swift */,
 				ADF36DB62750FE1A008BA1DB /* UIColor+Tools.swift */,
 				ADED6FCC29E92B8E00308406 /* URL+Tools.swift */,
+				AD8CDF2B2A85DC280092C732 /* UIStackView+Tools.swift */,
 				ADF36DB72750FE1A008BA1DB /* UITableViewCell+Tools.swift */,
 				ADF36DB02750FE1A008BA1DB /* UICollectionViewCell+Tools.swift */,
 				ADCC89A02754946300912771 /* UITableView+Tools.swift */,
@@ -473,6 +476,7 @@
 				AD897CA8289F816800EAB0BA /* WKUserContentController+Handler.swift in Sources */,
 				ADED6FCB29E92A6C00308406 /* SpaceLabel.swift in Sources */,
 				ADF36DC42750FE1A008BA1DB /* UIView+Tools.swift in Sources */,
+				AD8CDF2C2A85DC280092C732 /* UIStackView+Tools.swift in Sources */,
 				ADF36DC52750FE1A008BA1DB /* NSObject+Tools.swift in Sources */,
 				AD63D1BE2760CA7600F19301 /* DashView.swift in Sources */,
 				ADF36DBE2750FE1A008BA1DB /* Date+Tools.swift in Sources */,

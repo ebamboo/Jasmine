@@ -18,6 +18,7 @@ public struct JustWork {
     }
     
     private static var workTimesInfo: [String: Int] = [:]
+    
 }
 
 public extension NSObject {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension URL {
+public extension URL {
     
     /// 参数中 key 为非空字符串，value 值可以为 ""
     var param: [String: String] {

@@ -78,6 +78,8 @@
 		ADF36E2927537D3D008BA1DB /* PresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF36E2727537D3D008BA1DB /* PresentingViewController.xib */; };
 		ADF36E2C27537D49008BA1DB /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF36E2A27537D49008BA1DB /* PresentedViewController.swift */; };
 		ADF36E2D27537D49008BA1DB /* PresentedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF36E2B27537D49008BA1DB /* PresentedViewController.xib */; };
+		ADFCE2202AF4E9D900B878C1 /* ObservedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE21F2AF4E9D900B878C1 /* ObservedTextView.swift */; };
+		ADFCE2222AF4EA0300B878C1 /* ObservedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE2212AF4EA0300B878C1 /* ObservedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +156,8 @@
 		ADF36E2727537D3D008BA1DB /* PresentingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentingViewController.xib; sourceTree = "<group>"; };
 		ADF36E2A27537D49008BA1DB /* PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
 		ADF36E2B27537D49008BA1DB /* PresentedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentedViewController.xib; sourceTree = "<group>"; };
+		ADFCE21F2AF4E9D900B878C1 /* ObservedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedTextView.swift; sourceTree = "<group>"; };
+		ADFCE2212AF4EA0300B878C1 /* ObservedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +373,8 @@
 				ADF36E192752406F008BA1DB /* Keychain.swift */,
 				ADF36E2227537258008BA1DB /* ModelAnimator.swift */,
 				ADED6FCA29E92A6C00308406 /* SpaceLabel.swift */,
+				ADFCE21F2AF4E9D900B878C1 /* ObservedTextView.swift */,
+				ADFCE2212AF4EA0300B878C1 /* ObservedTextField.swift */,
 				ADF36DA92750FE1A008BA1DB /* OrientationButton.swift */,
 				AD63D1BD2760CA7600F19301 /* DashView.swift */,
 				AD63D1C42763751E00F19301 /* RoundView.swift */,
@@ -488,6 +494,7 @@
 				ADCC89A52754982800912771 /* CacheHeightViewController.swift in Sources */,
 				ADF36DBC2750FE1A008BA1DB /* String+Tools.swift in Sources */,
 				AD897CA6289F7DBF00EAB0BA /* JustWork.swift in Sources */,
+				ADFCE2222AF4EA0300B878C1 /* ObservedTextField.swift in Sources */,
 				ADF36E1A2752406F008BA1DB /* Keychain.swift in Sources */,
 				ADF36D982750FCA1008BA1DB /* ViewController.swift in Sources */,
 				AD8E0D22287173830016DD2F /* UIImage+Transform.swift in Sources */,
@@ -496,6 +503,7 @@
 				ADF36DB92750FE1A008BA1DB /* OrientationButton.swift in Sources */,
 				ADCC89A9275498C200912771 /* CacheTableViewCell.swift in Sources */,
 				AD8E0D392873EF480016DD2F /* UIImageTransformTestViewController.swift in Sources */,
+				ADFCE2202AF4E9D900B878C1 /* ObservedTextView.swift in Sources */,
 				ADB527D9286E8B03009ADAD5 /* String+Verify.swift in Sources */,
 				AD8EF01128DE9DC80069E714 /* CollectionViewTagLayout.swift in Sources */,
 				AD63D1C52763751E00F19301 /* RoundView.swift in Sources */,

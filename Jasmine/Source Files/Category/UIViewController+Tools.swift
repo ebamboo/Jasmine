@@ -77,11 +77,10 @@ public extension UIViewController {
         completion?()
     }
     
-    func removeFromParent(completion: (() -> Void)?) {
+    func removeSelf() {
         view.removeFromSuperview()
         willMove(toParent: nil)
         removeFromParent()
-        completion?()
     }
     
 }

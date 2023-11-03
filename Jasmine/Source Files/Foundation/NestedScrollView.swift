@@ -53,9 +53,9 @@ private let ___nested_main_scroll_view_tag___ = 3141592653
 //
 
 
-class NestedScrollView: UIScrollView, UIGestureRecognizerDelegate {
+public class NestedScrollView: UIScrollView, UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         gestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&
         otherGestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&
         otherGestureRecognizer.view?.tag == ___nested_main_scroll_view_tag___
@@ -63,9 +63,9 @@ class NestedScrollView: UIScrollView, UIGestureRecognizerDelegate {
     
 }
 
-class NestedTableView: UITableView, UIGestureRecognizerDelegate {
+public class NestedTableView: UITableView, UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         gestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&
         otherGestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&
         otherGestureRecognizer.view?.tag == ___nested_main_scroll_view_tag___
@@ -73,9 +73,9 @@ class NestedTableView: UITableView, UIGestureRecognizerDelegate {
     
 }
 
-class NestedCollectionView: UICollectionView, UIGestureRecognizerDelegate {
+public class NestedCollectionView: UICollectionView, UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         gestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&
         otherGestureRecognizer.isKind(of: UIPanGestureRecognizer.self) &&
         otherGestureRecognizer.view?.tag == ___nested_main_scroll_view_tag___

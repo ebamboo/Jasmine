@@ -12,12 +12,12 @@ import UIKit
 /// 默认状态等效为 UILabel
 /// 每次设置 wordSpace 或者 lineSpace 之后赋值字符串给 text 才会生效
 ///
-class SpaceLabel: UILabel {
+open class SpaceLabel: UILabel {
  
     @IBInspectable var wordSpace: CGFloat = 0
     @IBInspectable var lineSpace: CGFloat = 0
     
-    override var text: String? {
+    open override var text: String? {
         didSet {
             guard let string = text, !string.isEmpty else { return }
             let attributedString = NSMutableAttributedString(string: string)

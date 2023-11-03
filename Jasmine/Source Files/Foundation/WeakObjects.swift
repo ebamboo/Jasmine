@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Weak {
+public struct Weak {
     weak private (set) var value: AnyObject?
     init(_ value: AnyObject) { self.value = value }
 }
 
-extension Array where Element == Weak {
+public extension Array where Element == Weak {
     mutating func compact() { self = filter { $0.value != nil } }
 }
 
-extension Dictionary where Value == Weak {
+public extension Dictionary where Value == Weak {
     mutating func compact() { self = filter { $0.value.value != nil } }
 }
